@@ -13,9 +13,6 @@ public class SeparatingDigits {
         int div4 = number/10%10;
         int div5 = number/1%10;
 
-        if ( number >= 5) {
-            System.out.println("Invalid digit");
-            System.out.println(div1+" "+div2+" "+div3+" "+div4+" "+div5);
-        }
+        System.out.println(div1+" "+div2+" "+div3+" "+div4+" "+div5);
     }
 }
