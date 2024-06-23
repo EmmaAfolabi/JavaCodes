@@ -17,10 +17,10 @@ public class BMICalculator {
         if (BMI < 18){
             System.out.println( "Underweight");
         }
-        if (BMI == 19-24){
+        if (BMI == (19-24)){
             System.out.println("Normal weight");
         }
-        if (BMI == 25-29){
+        if (BMI == (25-29)){
             System.out.println("Overweight");
         }
         if (BMI > 30){
