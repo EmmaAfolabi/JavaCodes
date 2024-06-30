@@ -20,7 +20,7 @@ public class ModifiedBMI {
         if (BMI == (18.5 - 24.9)){
             System.out.println("Normal weight!");
         }
-        if (BMI == (25 - 29.9)){
+        if (BMI == (25.0 - 29.9)){
             System.out.println("Overweight!");
         }
         if (BMI >= 30){

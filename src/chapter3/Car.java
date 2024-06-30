@@ -31,12 +31,13 @@ public class Car {
 
     public void setPrice(double price) {
         Price = price;
+        if (price <0){
+            System.out.println("null");
+        }
     }
 
-    public Car(String Year, double price) {
-        this.Year = Year;
-        this.Price = Price;
+    public Car(String year, double price) {
+        Year = year;
+        Price = price;
     }
-
-
 }
