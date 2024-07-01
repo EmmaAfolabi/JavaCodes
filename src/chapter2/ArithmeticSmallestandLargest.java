@@ -6,40 +6,43 @@ public class ArithmeticSmallestandLargest {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
+        //stores first integer
         System.out.println("Enter first integer: ");
-        int number1 = input.nextInt();
+        int num1 = input.nextInt();
 
+        //stores second integer
         System.out.println("Enter second integer: ");
-        int number2 = input.nextInt();
+        int num2 = input.nextInt();
 
+        //stores third integer
         System.out.println("Enter third integer: ");
-        int number3 = input.nextInt();
+        int num3 = input.nextInt();
 
-        int sum = number1 + number2 + number3;
+        int sum = num1 + num2 + num3;
         System.out.printf("sum of the three integers %d%n", sum);
 
-        int average = (number1 + number2 + number3)/3;
+        int average = (num1 + num2 + num3)/3;
         System.out.printf("average of three integers %d%n", average);
 
-        int product = number1 * number2 * number3;
+        int product = num1 * num2 * num3;
         System.out.printf("product of three integers %d%n", product);
 
-        if (number1 > number2 && number1 > number3){
+        if (num1 > num2 && num1 > num3){
             System.out.println("Number1 is the largest");
         }
-        if (number1 < number2 && number1 < number3){
+        if (num1 < num2 && num1 < num3){
             System.out.println("Number1 is the smallest");
         }
-        if (number2 > number1 && number2 > number3){
+        if (num2 > num1 && num2 > num3){
             System.out.println("Number2 is the largest");
         }
-        if (number2 < number1 && number2 < number3){
+        if (num2 < num1 && num2 < num3){
             System.out.println("Number2 is the smallest");
         }
-        if (number3 > number1 && number3 > number2){
+        if (num3 > num1 && num3 > num2){
             System.out.println("Number3 is the largest");
         }
-        if (number3 < number1 && number3 < number2){
+        if (num3 < num1 && num3 < num2){
             System.out.println("Number3 is the smallest");
         }
     }
