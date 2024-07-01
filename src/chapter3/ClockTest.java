@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class ClockTest {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int hour = 25;
+        int hour = 90;
         Clock clock = new Clock(hour);
         int minute = 44;
         int second = 22;
