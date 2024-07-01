@@ -11,15 +11,18 @@ public class CarApplication {
         Car myCar1 = new Car(price);
         myCar1.setModel(myCar1.getModel());
         myCar1.setPrice(10000);
-        System.out.printf("Price of %s is $%.2f%n", myCar1.getModel(), myCar1.getPrice());
+        System.out.printf("Price of %s is: $%.2f%n", myCar1.getModel(), myCar1.getPrice());
+        double discount = myCar1.getPrice() - ((0.5) * myCar1.getPrice());
+        System.out.printf("discount for the %s is: $%.2f%n ", myCar1.getModel(), discount);
 
 
-        System.out.println("Enter the model of the other car you want to check out: ");
-        String amount = input.next();
-        Car mycar2 = new Car(amount);
-        mycar2.setModel(mycar2.getModel());
-        mycar2.setPrice(20000);
-        System.out.printf("Price of %s is $%.2f%n ", mycar2.getModel(),mycar2.getPrice());
-
+        System.out.println("Enter your choicest model of car that you want to check out: ");
+        String price2 = input.next();
+        Car myCar2 = new Car(price2);
+        myCar2.setModel(myCar2.getModel());
+        myCar2.setPrice(20000);
+        System.out.printf("Price of %s is $%.2f%n ", myCar2.getModel(),myCar2.getPrice());
+        double discount2 = myCar2.getPrice() - ((0.7) * myCar2.getPrice());
+        System.out.printf("discount for %s is: $%.2f%n", myCar2.getModel(),discount2);
     }
 }
