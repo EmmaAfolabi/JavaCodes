@@ -6,17 +6,15 @@ public class DiameterCircumferenceandAreaofaCircle {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Kindly enter the radius: ");
-        int radius = input.nextInt();
+        System.out.println("Kindly the radius of the circle: ");
+        int radius;
+        radius = input.nextInt();
 
-        int diameter = 2*radius;
-        System.out.printf("Diameter of the circle is %d%n", diameter);
+        System.out.printf("Diameter of the circle of radius %d is %d%n", radius, 2*radius);
 
-        int circumference = (int) (2 * Math.PI * radius);
-        System.out.printf("Circumference of the circle is %d%n", circumference);
+        System.out.printf("Circumference of the circle is %f%n", (2 * Math.PI * radius));
 
-        int area = (int) (Math.PI * radius * radius);
-        System.out.printf("Area of the circle is %d%n", area);
+        System.out.printf("Area of the circle of radius %d is %f%n", radius, (Math.PI * radius * radius));
 
     }
 }
