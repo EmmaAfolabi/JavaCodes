@@ -12,8 +12,8 @@ public class Clock {
 
     public void setHour(int hour) {
         this.hour = hour;
-        if (hour > 23){
-            hour =0;
+        if (hour > 23) {
+            setHour(0);
         }
     }
 
@@ -24,7 +24,7 @@ public class Clock {
     public void setMinute(int minute) {
         this.minute = minute;
         if (minute > 59){
-            minute =0;
+            setMinute(0);
         }
     }
 
@@ -35,16 +35,13 @@ public class Clock {
     public void setSecond(int second) {
         this.second = second;
         if (second > 59){
-            second =0;
+            setSecond(0);
         }
     }
 
-    public Clock(int hour) {
-        this.hour = hour;
-    }
-
-    public Clock(int minute, int second) {
+    public Clock(int hour, int minute, int second) {
         this.minute = minute;
         this.second = second;
+        this.hour = hour;
     }
 }

@@ -5,12 +5,12 @@ import java.util.Scanner;
 public class ClockTest {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int hour = 90;
-        Clock clock = new Clock(hour);
-        int minute = 44;
-        int second = 22;
-        clock = new Clock(minute, second);
-        System.out.printf("%d:%d:%d",hour,minute,second);
+        Clock time = new Clock(2, 6, 45 );
+        time.setHour(18);
+        time.setMinute(18);
+        time.setSecond(80);
+
+        System.out.printf("The time is %d:%d:%d", time.getHour(), time.getMinute(), time.getSecond());
 
     }
 }
