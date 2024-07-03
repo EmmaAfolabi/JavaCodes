@@ -22,6 +22,6 @@ public class Petrol {
         System.out.printf("%s sells %s at $%.2f per liter%n", location.getLocation(),location.getpetroltype(), location.getpriceperliter());
         System.out.printf("A Customer wants to buy %d liters of %s with a discount of %.0f percent%n", quantityinliters, location.getpetroltype(), location.getPercentagediscount());
         location.getPurchaseAmount();
-        System.out.printf("The net purchase amount is %.2f%n", location.getPurchaseAmount());
+        System.out.printf("The net purchase amount is $%.2f%n", location.getPurchaseAmount());
     }
 }
