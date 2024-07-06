@@ -77,7 +77,7 @@ public class HeartRates {
     }
 
     public static void main(String[] args) {
-        HeartRates info = new HeartRates("emma", "ade", 19_12_4, "december", 19, 2001);
+        HeartRates info = new HeartRates("emma", "ade", 19_12_2004, "december", 19, 2001);
         Scanner input = new Scanner(System.in);
 
         System.out.println("Enter your firstname: ");
