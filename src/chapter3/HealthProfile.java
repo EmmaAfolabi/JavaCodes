@@ -12,6 +12,12 @@ public class HealthProfile {
     double weightinpounds;
     int age;
 
+    public HealthProfile(double BMI) {
+        this.BMI = BMI;
+    }
+
+    double BMI;
+
 
     public HealthProfile(String firstname, String lastname, String gender, int dateofbirth, String month, int day, int yearofbirth, double heightininches, double weightinpounds) {
         this.firstname = firstname;
@@ -113,7 +119,7 @@ public class HealthProfile {
     }
 
     public double BMI(){
-        double BMI = (weightinpounds *703) /heightininches * heightininches ;
+        double BMI = ((weightinpounds * 703) /(heightininches * heightininches)) ;
         return BMI;
     }
 
@@ -150,6 +156,11 @@ public class HealthProfile {
         System.out.println("my height in inches: " + profile.getHeightininches());
         System.out.println("my weight in pounds: " + profile.getWeightinpounds());
 
+        System.out.printf("my age: %d%n ", profile.getAge());
+        System.out.printf("my BMI: %.2f%n", profile.BMI());
+        System.out.println("my maximum heart rate: " + profile.maximumheartrate());
+        System.out.println("my target heart rate: " + profile.targetheartrate());
+        System.out.println("BMI categories:\n Underweight = <18.5\n Normal weight = 18.5 - 24.9\n Overweight = 25-29.9\n Obesity = BMI of 30 or greater");
 
     }
 }
