@@ -21,7 +21,7 @@ public class ModifyAccount {
     public void withdraw(double withdrawalAmount){
        if (withdrawalAmount < this.balance){
            this.balance = this.balance- withdrawalAmount;
-           System.out.printf("successful withdrawal");
+           System.out.println("successful withdrawal");
        }
        else{
            System.out.println("Withdrawal amount exceeded!");

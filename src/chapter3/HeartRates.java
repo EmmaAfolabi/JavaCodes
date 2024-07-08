@@ -5,110 +5,92 @@ import java.util.Scanner;
 public class HeartRates {
      String firstname = ("Emma");
      String lastname;
-     int dateofbirth;
-     String month; int day; int yearofbirth;
-     int age;
+     int day, month, year;
+     String dateofbirth;
+     int maximumrate;
 
-    public String getFirstname() {
-        return firstname;
-    }
-
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
-    }
-
-    public String getLastname() {
-        return lastname;
-    }
-
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
-    }
-
-    public int getDateofbirth() {
-        return dateofbirth;
-    }
-
-    public void setDateofbirth(int dateofbirth) {
-        this.dateofbirth = dateofbirth;
-    }
-
-    public String getMonth() {
-        return month;
-    }
-
-    public void setMonth(String month) {
-        this.month = month;
-    }
-
-    public int getDay() {
-        return day;
-    }
-
-    public void setDay(int day) {
-        this.day = day;
-    }
-
-    public int getYearofbirth() {
-        return yearofbirth;
-    }
-
-    public void setYearofbirth(int yearofbirth) {
-        this.yearofbirth = yearofbirth;
-    }
-
-
-    public HeartRates(String firstname, String lastname, int dateofbirth, String month, int day, int yearofbirth) {
+    public HeartRates(String firstname, String lastname, int day, int month, int year) {
         this.firstname = firstname;
         this.lastname = lastname;
-        this.dateofbirth = dateofbirth;
-        this.month = month;
         this.day = day;
-        this.yearofbirth = yearofbirth;
+        this.month = month;
+        this.year = year;
     }
 
-    public int getAge() {
-        age = 2024 - yearofbirth;
+    public int calculateage() {
+        int age = 2024 - year;
         return age;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public int calculateMaxHeartRate(){
+        int age = 2024 - year;
+        int maxRate = 220 - age;
+        this.maximumrate = maxRate;
+        return maximumrate;
     }
 
+    public double calculateTargetRate(){
+        double target = (double) maximumrate * 0.5;
+        return target;
+    }
+
+    public void setFirstname(String firstname){
+        this.firstname = firstname;
+    }
+
+    public void  setLastname(){
+        this.lastname = lastname;
+    }
+
+    public void setDateofbirth(int day, int month, int year){
+        this.month = month;
+        this.day = day;
+        this.year = year;
+        this.dateofbirth = day + "/" + month + "/" + year;
+    }
+
+    public String getFirstname(){
+        return firstname;
+    }
+
+    public String getLastname(){
+        return lastname;
+    }
+
+    public String returndateofbirth (){
+        dateofbirth = day +"/" + month + "/" + year;
+        return dateofbirth;
+    }
+
+
     public static void main(String[] args) {
-        HeartRates info = new HeartRates("emma", "ade", 19_12_2004, "december", 19, 2001);
+
         Scanner input = new Scanner(System.in);
 
+        System.out.println("Welcome to Heart Rate Calculator Program: ");
         System.out.println("Enter your firstname: ");
-        info.firstname = input.next();
+        String firstname = input.nextLine();
 
         System.out.println("Enter your lastname: ");
-        info.lastname = input.next();
+        String lastname = input.nextLine();
 
-        System.out.println("Enter your day of birth: ");
-        info.day = input.nextInt();
+        System.out.print("Enter your date of birth \n" + "Day: ");
+        int day = input.nextInt();
+        System.out.print("Month: ");
+        int month = input.nextInt();
+        System.out.print("Year: ");
+        int year = input.nextInt();
 
-        System.out.println("Enter your month of birth: ");
-        info.month = input.next();
+        HeartRates profile = new HeartRates(firstname, lastname, day, month, year);
+        System.out.println();
+        System.out.println("My profile;");
+        System.out.println("Name: " + profile.getFirstname() + " " + profile.getLastname());
+        System.out.println("Date of birth is: " + profile.returndateofbirth());
+        System.out.println("Age: " + profile.calculateage() +" ");
 
-        System.out.println("Enter your year of birth: ");
-        info.yearofbirth = input.nextInt();
+        System.out.println("Maximum heart rate is: " + profile.calculateMaxHeartRate()+" ");
+        System.out.println("Target heart rate is: " + profile.calculateTargetRate()+" ");
 
-        int maximumheartrate = 220 - info.getAge();
-        double targetheartrate = (0.75) * maximumheartrate ;
 
-        System.out.printf("first name: %s%n " +
-                "lastname: %s%n",info.firstname, info.lastname );
-        System.out.printf("Date of birth : %d, %s, %d%n", info.getDay(), info.getMonth(), info.getYearofbirth());
-        System.out.printf("Your age: %d%n", info.getAge());
-        System.out.println("Your maximum heart rate in beats per minute is " + maximumheartrate);
-        System.out.println("Your target heart rate is " + targetheartrate);
-
-//        info.firstname = info.getFirstname();
-//        info.lastname = info.getLastname();
-//        info.dateofbirth = info.getDateofbirth();
-//        info.age = info.getAge();
-//        System.out.println();
     }
 }
