@@ -69,10 +69,10 @@ public class HeartRates {
 
         System.out.println("Welcome to Heart Rate Calculator Program: ");
         System.out.println("Enter your firstname: ");
-        String firstname = input.nextLine();
+        String firstname = input.next();
 
         System.out.println("Enter your lastname: ");
-        String lastname = input.nextLine();
+        String lastname = input.next();
 
         System.out.print("Enter your date of birth \n" + "Day: ");
         int day = input.nextInt();
@@ -83,7 +83,7 @@ public class HeartRates {
 
         HeartRates profile = new HeartRates(firstname, lastname, day, month, year);
         System.out.println();
-        System.out.println("My profile;");
+        System.out.println("Your profile are as follows; ");
         System.out.println("Name: " + profile.getFirstname() + " " + profile.getLastname());
         System.out.println("Date of birth is: " + profile.returndateofbirth());
         System.out.println("Age: " + profile.calculateage() +" ");
