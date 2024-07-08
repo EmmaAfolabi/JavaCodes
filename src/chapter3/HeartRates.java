@@ -57,7 +57,7 @@ public class HeartRates {
         return lastname;
     }
 
-    public String returndateofbirth (){
+    public String dateofbirth (){
         dateofbirth = day +"/" + month + "/" + year;
         return dateofbirth;
     }
@@ -85,7 +85,7 @@ public class HeartRates {
         System.out.println();
         System.out.println("Your profile are as follows; ");
         System.out.println("Name: " + profile.getFirstname() + " " + profile.getLastname());
-        System.out.println("Date of birth is: " + profile.returndateofbirth());
+        System.out.println("Date of birth is: " + profile.dateofbirth());
         System.out.println("Age: " + profile.calculateage() +" ");
 
         System.out.println("Maximum heart rate is: " + profile.calculateMaxHeartRate()+" ");

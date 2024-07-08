@@ -6,161 +6,90 @@ public class HealthProfile {
     String firstname;
     String lastname;
     String gender;
-    int dateofbirth;
-    String month; int day; int yearofbirth;
+    String dateofbirth;
+    int year;
+    int maximumRate;
     double heightininches;
     double weightinpounds;
-    int age;
-
-    public HealthProfile(double BMI) {
-        this.BMI = BMI;
-    }
-
-    double BMI;
 
 
-    public HealthProfile(String firstname, String lastname, String gender, int dateofbirth, String month, int day, int yearofbirth, double heightininches, double weightinpounds) {
+    public HealthProfile(String firstname, String lastname, String gender, int day, int month, int year, double weight, double height) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.gender = gender;
-        this.dateofbirth = dateofbirth;
-        this.month = month;
-        this.day = day;
-        this.yearofbirth = yearofbirth;
-        this.heightininches = heightininches;
-        this.weightinpounds = weightinpounds;
-    }
-
-    public String getFirstname() {
-        return firstname;
+        this.dateofbirth = day + "-" + month + "-" + year;
+        this.year = year;
+        this.heightininches = height;
+        this.weightinpounds = weight;
     }
 
     public void setFirstname(String firstname) {
         this.firstname = firstname;
     }
 
-    public String getLastname() {
-        return lastname;
-    }
-
     public void setLastname(String lastname) {
         this.lastname = lastname;
-    }
-
-    public String getGender() {
-        return gender;
     }
 
     public void setGender(String gender) {
         this.gender = gender;
     }
 
-    public int getDateofbirth() {
+    public void setDateofbirth(int day, int month, int year) {
+        this.dateofbirth = day + "-" + month + "-" + year;
+    }
+
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public String retunDOB(){
         return dateofbirth;
     }
 
-    public void setDateofbirth(int dateofbirth) {
-        this.dateofbirth = dateofbirth;
+    public void setWeight(double weight) {
+        this.weightinpounds = weight;
     }
 
-    public String getMonth() {
-        return month;
-    }
-
-    public void setMonth(String month) {
-        this.month = month;
-    }
-
-    public int getDay() {
-        return day;
-    }
-
-    public void setDay(int day) {
-        this.day = day;
-    }
-
-    public int getYearofbirth() {
-        return yearofbirth;
-    }
-
-    public void setYearofbirth(int yearofbirth) {
-        this.yearofbirth = yearofbirth;
-    }
-
-    public double getHeightininches() {
-        return heightininches;
-    }
-
-    public void setHeightininches(int heightininches) {
-        this.heightininches = heightininches;
-    }
-
-    public double getWeightinpounds() {
+    public double getWeight() {
         return weightinpounds;
     }
 
-    public void setWeightinpounds(double weightinpounds) {
-        this.weightinpounds = weightinpounds;
+    public void setHeight(double height) {
+        this.heightininches = height;
     }
 
-    public int getAge() {
-        age = 2024 - yearofbirth;
+    public double getHeight() {
+        return heightininches;
+    }
+
+    public int calculateAge() {
+        int age = 2024 - year;
         return age;
     }
 
-    public int maximumheartrate(){
-        int maximumheartrate = 220 - getAge();
-        return maximumheartrate;
+    public int calculatemaxHeartRate(){
+        int age = 2024 - year;
+        int maxHeartRate = 220 - age;
+        this.maximumRate = maxHeartRate;
+        return maximumRate;
     }
 
-    public double targetheartrate(){
-        double targetheartrate = (0.75) * maximumheartrate();
-        return targetheartrate;
+    public double calculateTargetHeartRate(){
+        double target = (0.75) * maximumRate;
+        return target;
     }
 
-    public double BMI(){
+    public double calculateBMI(){
         double BMI = ((weightinpounds * 703) /(heightininches * heightininches)) ;
         return BMI;
-    }
-
-    public static void main(String[] args) {
-        HealthProfile profile = new HealthProfile("Alabi", "Joshua", "male", 19_12_2002, "april", 12, 2002, 48, 178.574);
-        Scanner input = new Scanner(System.in);
-
-        System.out.println("Enter your firstname: ");
-        profile.firstname = input.next();
-
-        System.out.println("Enter your lastname: ");
-        profile.lastname = input.next();
-
-        System.out.println("what is your gender: ");
-        profile.gender = input.next();
-
-        System.out.println("Enter your date of birth: ");
-        profile.day = input.nextInt();
-        System.out.println("Enter your birth month: ");
-        profile.month = input.next();
-        System.out.println("Enter your year of birth:");
-        profile.yearofbirth = input.nextInt();
-
-        System.out.println("Enter your height in inches: ");
-        profile.heightininches = input.nextDouble();
-
-        System.out.println("Enter your weight in pounds: ");
-        profile.weightinpounds = input.nextDouble();
-
-        System.out.println("first name :" + profile.getFirstname());
-        System.out.println("last name :"+ profile.getLastname());
-        System.out.println("gender: " + profile.getGender());
-        System.out.printf("my date of birth: %d, %s %d%n ",profile.getDay(),  profile.getMonth(), profile.getYearofbirth());
-        System.out.println("my height in inches: " + profile.getHeightininches());
-        System.out.println("my weight in pounds: " + profile.getWeightinpounds());
-
-        System.out.printf("my age: %d%n ", profile.getAge());
-        System.out.printf("my BMI: %.2f%n", profile.BMI());
-        System.out.println("my maximum heart rate: " + profile.maximumheartrate());
-        System.out.println("my target heart rate: " + profile.targetheartrate());
-        System.out.println("BMI categories:\n Underweight = <18.5\n Normal weight = 18.5 - 24.9\n Overweight = 25-29.9\n Obesity = BMI of 30 or greater");
-
     }
 }
