@@ -5,10 +5,11 @@ import java.util.Scanner;
 public class Sumofintegers {
     public static void main(String[] args) {
         int x = 5;
-        int product = 5;
+        int y = 7;
 
-        product *= x++;
-        System.out.printf("Product = %d%n", product);
+        x = y++ ;
+        System.out.printf("x = %d%n", x);
+        x = ++y;
         System.out.printf("x = %d%n", x);
     }
 }
