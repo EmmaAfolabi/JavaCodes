@@ -4,12 +4,14 @@ import java.util.Scanner;
 
 public class Sumofintegers {
     public static void main(String[] args) {
-        int x = 5;
-        int y = 7;
+        int sum = 0;
+        int x = 1;
 
-        x = y++ ;
-        System.out.printf("x = %d%n", x);
-        x = ++y;
-        System.out.printf("x = %d%n", x);
+        while (x <= 10) {
+            sum += x;
+            ++x;
+        }
+
+        System.out.printf("The sum is: %d%n", sum);
     }
 }
