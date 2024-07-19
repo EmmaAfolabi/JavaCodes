@@ -12,6 +12,7 @@ public class GasMileage {
         public double calculateMilesPerGallons() {
             double milesPerGallons;
             Scanner input = new Scanner(System.in);
+
             System.out.println("Enter 1 to record miles driven and gallons used for each trips and 0 to end: ");
             int trips = input.nextInt();
 
