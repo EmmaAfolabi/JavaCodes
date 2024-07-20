@@ -21,7 +21,7 @@ public class Analysis {
                 failures = failures + 1;
             }
 
-            studentCounter = studentCounter + 1;
+            studentCounter++;
         }
 
         System.out.printf("Passed: %d%nFailed: %d%n", passes, failures);
