@@ -9,10 +9,11 @@ public class Factorial {
         System.out.println("Kindly input the number to get the factorial: ");
         int num = input.nextInt();
         //int num = 15;
-        int factorial = 1;
+        int factorial = 1, i = 1;
 
-        for (int i = 1; i<=num; ++i) {
+        while( i <= num) {
             factorial *= i;
+            i++;
         }
         //System.out.println("Factorial of" + num + "is:" + factorial);
         System.out.printf("Factorial of %d is %d%n", num, factorial);
