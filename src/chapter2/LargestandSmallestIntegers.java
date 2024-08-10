@@ -5,16 +5,22 @@ import java.util.Scanner;
 public class LargestandSmallestIntegers {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+
         System.out.println("Enter first integer: ");
         int number1 = input.nextInt();
+
         System.out.println("Enter second integer: ");
         int number2 = input.nextInt();
+
         System.out.println("Enter third integer: ");
         int number3 = input.nextInt();
+
         System.out.println("Enter fourth integer: ");
         int number4 = input.nextInt();
+
         System.out.println("Enter fifth integer: ");
         int number5= input.nextInt();
+
         if (number1>number2&&number1>number3&&number1>number4&&number1>number5){
             System.out.println("number1 is the largest");
         }
