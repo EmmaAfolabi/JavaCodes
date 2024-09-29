@@ -21,14 +21,16 @@ public class TaxCalculator {
         Scanner scanner = new Scanner(System.in);
 
         for (int i =1; i <= 3; i++){
-            System.out.println("Enter the name of the citizen: ");
+            System.out.printf("Enter the name of the citizen %d: %n", i);
             String name = scanner.next();
 
-            System.out.printf("Enter earnings of %s:$", name);
+            System.out.printf("Enter earnings of %s:$%n", name);
             double earnings = scanner.nextDouble();
 
             double tax = calculateTax(earnings);
 
+            System.out.printf("Total tax for %s is: $%.2f%n", name, tax);
+            System.out.println();
         }
     }
 }
