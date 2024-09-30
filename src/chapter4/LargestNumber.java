@@ -14,6 +14,11 @@ public class LargestNumber {
         System.out.println("Enter a a series of 10 integers: ");
         number = input.nextInt();
 
+        while (counter <= 10){
 
+            if (number>largest){
+                largest = number;
+            }
+        }
     }
 }
