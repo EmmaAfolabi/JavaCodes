@@ -19,6 +19,8 @@ public class LargestNumber {
             if (number>largest){
                 largest = number;
             }
+            counter ++;
+            System.out.printf("The largest of %d numbers is: %d%n", counter, largest);
         }
     }
 }
