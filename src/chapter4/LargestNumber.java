@@ -10,5 +10,10 @@ public class LargestNumber {
         int counter = 0;
         int number;
         int largest = 0;
+
+        System.out.println("Enter a a series of 10 integers: ");
+        number = input.nextInt();
+
+
     }
 }
