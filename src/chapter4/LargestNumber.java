@@ -9,18 +9,23 @@ public class LargestNumber {
 
         int counter = 0;
         int number;
-        int largest = 0;
+        int largest;
 
-        System.out.println("Enter a a series of 10 integers: ");
+        System.out.printf("Enter the first number: %n");
         number = input.nextInt();
 
-        while (counter <= 10){
+        largest = number;
+        counter++;
 
-            if (number>largest){
+        while (counter < 10){
+            System.out.printf("Enter the next number: %n");
+            number = input.nextInt();
+
+            if (number > largest) {
                 largest = number;
             }
             counter ++;
-            System.out.printf("The largest of %d numbers is: %d%n", counter, largest);
         }
+        System.out.printf("The largest of %d numbers is: %d%n", counter, largest);
     }
 }
