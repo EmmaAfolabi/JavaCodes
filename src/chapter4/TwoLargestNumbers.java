@@ -29,5 +29,7 @@ public class TwoLargestNumbers {
             counter++;
         }
 
+        System.out.printf("The largest number is: %d%n", firstlargest);
+        System.out.printf("The second largest number is: %d%n", secondlargest);
     }
 }
