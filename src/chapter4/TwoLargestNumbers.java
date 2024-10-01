@@ -10,11 +10,21 @@ public class TwoLargestNumbers {
         int counter = 1;
         int number;
         int firstlargest = 0;
-        int Secondlargest = 0;
+        int secondlargest = 0;
 
         System.out.println("Enter a series of ten numbers: ");
         number = input.nextInt();
 
+        while (counter <= 10){
+            if (number > firstlargest){
+                firstlargest = number;
+            }
+            else
+                if (number > secondlargest){
+                    secondlargest = number;
+                }
+        }
+        counter++;
 
 
     }
