@@ -9,8 +9,13 @@ public class TwoLargestNumbers {
 
         int counter = 1;
         int number;
-        int firstlargest;
-        int Secondlargest;
+        int firstlargest = 0;
+        int Secondlargest = 0;
+
+        System.out.println("Enter a series of ten numbers: ");
+        number = input.nextInt();
+
+
 
     }
 }
