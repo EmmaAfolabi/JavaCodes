@@ -16,6 +16,6 @@ public class ValidatingUserinput {
             }
         } while (userinput != 1 && userinput != 2);
 
-        System.out.printf("You entered a valid value :%d%n", userinput);
+        System.out.printf("You entered a valid value: %d%n", userinput);
     }
 }
