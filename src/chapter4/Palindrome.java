@@ -11,4 +11,10 @@ public class Palindrome {
     public void setNumber(int number) {
         this.number = number;
     }
+    public boolean isPalindrome() {
+        int reversedInt = 0;
+        int InitialNum = number;
+        int remainder;
+        int tempNumber = number;
+    }
 }
