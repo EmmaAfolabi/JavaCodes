@@ -1,5 +1,7 @@
 package chapter4;
 
+import java.util.Scanner;
+
 public class Palindrome {
     private int number;
 
@@ -25,5 +27,15 @@ public class Palindrome {
         }
 
         return reversedInt == InitialNum;
+    }
+
+    public static void main(String[] args) {
+        Palindrome palindromeChecker = new Palindrome();
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter a number to check if it's a palindrome: ");
+        int userInput = input.nextInt();
+
+
     }
 }
