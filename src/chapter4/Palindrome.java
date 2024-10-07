@@ -36,6 +36,12 @@ public class Palindrome {
         System.out.print("Enter a number to check if it's a palindrome: ");
         int userInput = input.nextInt();
 
+        palindromeChecker.setNumber(userInput);
 
+        if (palindromeChecker.isPalindrome()) {
+            System.out.println(userInput + "is a palindrome.");
+        } else {
+            System.out.println(userInput + "is not a palindrome.");
+        }
     }
 }
