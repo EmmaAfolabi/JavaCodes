@@ -1,5 +1,7 @@
 package chapter4;
 
+import java.util.Scanner;
+
 public class ConvertBinary {
 
     public int convertbinary (int number) {
@@ -16,6 +18,13 @@ public class ConvertBinary {
             counter *= 2;
         }
         return total;
+    }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter Binary Number: ");
+        int number = input.nextInt();
     }
 
 }
