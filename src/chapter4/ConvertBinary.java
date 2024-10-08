@@ -25,6 +25,9 @@ public class ConvertBinary {
 
         System.out.println("Enter Binary Number: ");
         int number = input.nextInt();
+
+        ConvertBinary type = new ConvertBinary();
+        System.out.printf("Decimal equivalent is: %d ", type.convertbinary(number));
     }
 
 }
