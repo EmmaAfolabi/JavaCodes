@@ -11,6 +11,13 @@ public class Checkerboard {
                    System.out.println("*");
                }
            }
+
+           else {
+               System.out.print("");
+               for (int column = 1; column <= 8; column++) {
+                   System.out.println("*");
+               }
+           }
         }
     }
 }
