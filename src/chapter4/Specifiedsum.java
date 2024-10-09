@@ -12,7 +12,10 @@ public class Specifiedsum {
         System.out.println("Enter a number: ");
         initialnumber = input.nextInt();
 
-        while (sum >= initialnumber) {
+        while (sum < initialnumber) {
+            System.out.println("Enter a number to add to the sum: ");
+            int number = input.nextInt();
+            sum += number;
 
         }
     }
