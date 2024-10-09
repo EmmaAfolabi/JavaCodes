@@ -17,6 +17,8 @@ public class Specifiedsum {
             int number = input.nextInt();
             sum += number;
 
+            System.out.printf("Last entered number: %d, Current sum of values: %d%n", number, sum);
         }
+        System.out.println("Sum has reached or exceeded the intial number.");
     }
 }
