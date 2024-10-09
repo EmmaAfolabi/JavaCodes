@@ -11,6 +11,11 @@ public class Checkerboard {
                 System.out.print("*");
                 row++;
             }
+            System.out.println();
+
+            System.out.println("");
+
+
         }
     }
 }
