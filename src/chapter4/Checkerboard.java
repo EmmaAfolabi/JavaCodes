@@ -2,20 +2,15 @@ package chapter4;
 
 public class Checkerboard {
     public static void main(String[] args) {
-         int counter = 1;
+         int row = 1;
 
-        while (counter <= 4) {
-            int row = 1;
+        while (row <= 8) {
 
-            while (row <= 8) {
-                System.out.print("*");
-                row++;
-            }
-            System.out.println();
-
-            System.out.println("");
-
-
+           if (row % 2 != 0) {
+               for (int column = 1; column <= 8; column++) {
+                   System.out.println("*");
+               }
+           }
         }
     }
 }
