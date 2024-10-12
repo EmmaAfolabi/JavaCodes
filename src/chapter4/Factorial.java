@@ -9,6 +9,8 @@ public class Factorial {
         System.out.println("Enter a non-negative integer: ");
         int number = input.nextInt();
 
-
+        if (number < 0) {
+            System.out.println("Error! input must be a non-negative integer.");
+        }
     }
 }
