@@ -20,7 +20,7 @@ public class constant {
                 e += 1.0 / factorial;
             }
 
-
+            System.out.printf("Estimated value of e using %d terms is: %.10f%n", terms, e);
         }
     }
 }
