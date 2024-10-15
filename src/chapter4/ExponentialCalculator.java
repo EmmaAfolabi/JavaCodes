@@ -11,5 +11,13 @@ public class ExponentialCalculator {
 
         System.out.print("Enter the number of terms to calculate e^x: ");
         int terms = input.nextInt();
+
+        if (terms < 0) {
+            System.out.println("Error: The number of terms must be non-negative.");
+        }else {
+            double result = 1.0;
+            double term = 1.0;
+
+        }
     }
 }
