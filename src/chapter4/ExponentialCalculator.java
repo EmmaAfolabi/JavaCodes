@@ -18,6 +18,13 @@ public class ExponentialCalculator {
             double result = 1.0;
             double term = 1.0;
 
+            for (int i = 1; i < terms; i++) {
+                term *= x / i;
+                result += term;
+            }
+
+            System.out.printf("Estimated value of e^%.2f using %d terms is: %.10f%n",x, terms, result);
+
         }
     }
 }
