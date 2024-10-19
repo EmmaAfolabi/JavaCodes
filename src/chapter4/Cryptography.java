@@ -23,6 +23,9 @@ public class Cryptography {
 
         Scanner input = new Scanner(System.in);
 
+        System.out.println("Enter digits to encrypt: ");
+        int digits = input.nextInt();
+
 
     }
 }
