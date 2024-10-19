@@ -26,6 +26,6 @@ public class Cryptography {
         System.out.println("Enter digits to encrypt: ");
         int digits = input.nextInt();
 
-
+        System.out.printf("Encrypted value is %n%s", message.encryptNumber(digits));
     }
 }
