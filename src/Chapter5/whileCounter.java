@@ -6,6 +6,7 @@ public class whileCounter {
 
         while (counter <= 10) {
             System.out.printf("%d", counter);
+            counter++;
         }
     }
 }
