@@ -5,8 +5,9 @@ public class whileCounter {
         int counter = 1;
 
         while (counter <= 10) {
-            System.out.printf("%d", counter);
-            counter++;
+            System.out.printf("%d  ", counter);
+            ++counter;
         }
+        System.out.println();
     }
 }
