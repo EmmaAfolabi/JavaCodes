@@ -46,6 +46,21 @@ public class LetterGrades {
                     break;
             }
         }
+
+
+        System.out.printf("%nGrade Report: %n");
+
+
+        if (gradeCounter != 0) {
+
+            double average = (double) total / gradeCounter;
+
+
+            System.out.printf("Total of the %d grades entered is %d%n",
+                    gradeCounter, total);
+            System.out.printf("Class average is %.2f%n", average);
+            System.out.printf("%n%s");
+        }
     }
 }
 
