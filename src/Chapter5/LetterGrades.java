@@ -25,6 +25,26 @@ public class LetterGrades {
             int grade = input.nextInt();
             total += grade;
             ++gradeCounter;
+
+
+            switch (grade / 10) {
+                case 9:
+                case 10:
+                    ++aCount;
+                    break;
+                case 8:
+                    ++bCount;
+                    break;
+                case 7:
+                    ++cCount;
+                    break;
+                case 6:
+                    ++dCount;
+                    break;
+                default:
+                    ++fCount;
+                    break;
+            }
         }
     }
 }
