@@ -21,7 +21,11 @@ public class LetterGrades {
                 "On Windows type <Ctrl> z then press Enter");
 
 
-
+        while (input.hasNext()) {
+            int grade = input.nextInt();
+            total += grade;
+            ++gradeCounter;
+        }
     }
 }
 
