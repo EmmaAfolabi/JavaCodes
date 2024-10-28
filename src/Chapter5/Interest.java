@@ -8,5 +8,14 @@ public class Interest {
 
 
         System.out.printf("%s%20%s%n", "Year", "Amount on deposit");
+
+
+        for (int year = 1; year <= 10; ++year) {
+
+            double amount = principal * Math.pow(1.0 + rate, year);
+
+
+
+        }
     }
 }
