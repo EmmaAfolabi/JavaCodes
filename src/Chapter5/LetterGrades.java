@@ -20,11 +20,11 @@ public class LetterGrades {
                 "On UNIX/LINUX/macOS type <Ctrl> d then press Enter",
                 "On Windows type <Ctrl> z then press Enter");
 
-
+        //reads grades from the user
         while (input.hasNext()) {
-            int grade = input.nextInt();
-            total += grade;
-            ++gradeCounter;
+            int grade = input.nextInt();  //inputs the grade value from the user
+            total += grade;              //adds grade to total
+            ++gradeCounter;             //increments gradeCounter
 
 
             switch (grade / 10) {
@@ -43,7 +43,7 @@ public class LetterGrades {
                     break;
                 default:
                     ++fCount;
-                    break;
+                    //break;
             }
         }
 
@@ -72,4 +72,3 @@ public class LetterGrades {
         }
     }
 }
-
