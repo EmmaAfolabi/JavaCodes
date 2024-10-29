@@ -48,7 +48,7 @@ public class LetterGrades {
         }
 
 
-        System.out.printf("%nGrade Report: %n");
+        System.out.printf("%nGrade Report:%n");
 
 
         if (gradeCounter != 0) {
@@ -59,7 +59,16 @@ public class LetterGrades {
             System.out.printf("Total of the %d grades entered is %d%n",
                     gradeCounter, total);
             System.out.printf("Class average is %.2f%n", average);
-            System.out.printf("%n%s");
+            System.out.printf("%n%s%n%s%d%n%s%d%n%s%d%n%s%d%n%s%d%n",
+                    "Number of students who received each grade:",
+                    "A: ", aCount,
+                    "B: ", bCount,
+                    "C: ", cCount,
+                    "D: ", dCount,
+                    "F: ", fCount);
+        }
+        else {
+            System.out.println("No grades were entered");
         }
     }
 }
