@@ -9,5 +9,13 @@ public class AutoPolicyTest {
                 new AutoPolicy(22222222, "Ford Fusion", "ME");
 
         //display whether each policy is in a no-fault state
+        policyInNoFaultState(policy1);
+        policyInNoFaultState(policy2);
+    }
+
+    //method that displays whether an Autopolicy
+    //is in a state with no-fault auto insurance
+    public static void policyInNoFaultState(AutoPolicy policy) {
+
     }
 }
