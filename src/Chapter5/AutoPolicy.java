@@ -23,12 +23,23 @@ public class AutoPolicy {
         this.accountNumber = accountNumber;
     }
 
-
+    //sets the makeandModel
     public String getMakeAndModel() {
         return makeAndModel;
     }
 
+    //returns the makeAndModel
     public void setMakeAndModel(String makeAndModel) {
         this.makeAndModel = makeAndModel;
+    }
+
+    //sets the state
+    public String getState() {
+        return state;
+    }
+
+    //returns the state
+    public void setState(String state) {
+        this.state = state;
     }
 }
