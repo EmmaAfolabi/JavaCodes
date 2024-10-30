@@ -22,4 +22,13 @@ public class AutoPolicy {
     public void setAccountNumber(int accountNumber) {
         this.accountNumber = accountNumber;
     }
+
+
+    public String getMakeAndModel() {
+        return makeAndModel;
+    }
+
+    public void setMakeAndModel(String makeAndModel) {
+        this.makeAndModel = makeAndModel;
+    }
 }
