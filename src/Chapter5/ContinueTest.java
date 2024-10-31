@@ -9,5 +9,7 @@ public class ContinueTest {
 
             System.out.printf("%d ", count);
         }
+
+        System.out.printf("%nUsed continue to skip printing 5%n");
     }
 }
