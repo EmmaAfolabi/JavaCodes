@@ -9,7 +9,9 @@ public class BreakTest {
                 break; // terminates loop if count is 5
             }
 
-            System.out.printf("%d", count);
+            System.out.printf("%d ", count);
         }
+
+        System.out.printf("%nBroke out of loop at count = %d%n", count);
     }
 }
