@@ -6,6 +6,8 @@ public class ContinueTest {
             if (count == 5) {
                 continue;
             }
+
+            System.out.printf("%d ", count);
         }
     }
 }
