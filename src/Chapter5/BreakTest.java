@@ -8,6 +8,8 @@ public class BreakTest {
             if (count == 5) {
                 break; // terminates loop if count is 5
             }
+
+            System.out.printf("%d", count);
         }
     }
 }
