@@ -6,6 +6,8 @@ public class Exercise {
         while (i <= 20) {
             System.out.print(i);
         }
-git
+        if (i % 5 ==0) {
+            System.out.println();
+        }
     }
 }
