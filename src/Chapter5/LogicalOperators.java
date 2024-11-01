@@ -31,5 +31,13 @@ public class LogicalOperators {
                 "false | true", (false | true),
                 "true | false", (true | false),
                 "true | true", (true | true));
+
+        // create truth table for ^ (boolean logical exclusive OR) operator
+        System.out.printf("%s%n%s: %b%n%s: %b%n%s: %b%n%s: %b%n%n",
+                "Boolean logical exclusive OR (^)",
+                "false ^ false", (false ^ false),
+                "false ^ true", (false ^ true),
+                "true ^ false", (true ^ false),
+                "true ^ true", (true ^ true));
     }
 }
