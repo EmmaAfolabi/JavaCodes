@@ -39,5 +39,9 @@ public class LogicalOperators {
                 "false ^ true", (false ^ true),
                 "true ^ false", (true ^ false),
                 "true ^ true", (true ^ true));
+
+        // create truth table for ! (logical negation) operator
+        System.out.printf("%s%n%s: %b%n%s: %b%n", "Logical NOT (!)",
+                "!false", (!false), "!true", (!true));
     }
 }
