@@ -10,18 +10,26 @@ public class LogicalOperators {
                 "true && false", (true && false) ,
                 "true && true", (true && true));
 
-        // create truth table for & (boolean logical AND) operator
+        // create truth table for || (boolean logical AND) operator
         System.out.printf("%s%n%s: %b%n%s: %b%n%s: %b%n%s: %b%n%n",
                 "Conditional OR (||)", "false || false", (false || false),
                 "false || true", (false || true) ,
                 "true || false", (true || false),
                 "true || true", (true || true));
 
-        // create truth table for | (boolean logical AND) operator
+        // create truth table for & (boolean logical AND) operator
         System.out.printf("%s%n%s: %b%n%s: %b%n%s: %b%n%s: %b%n%n",
                 "Boolean logical AND (&)", "false & false", (false & false),
                 "false & true", (false & true),
                 "true & false", (true & false),
                 "true & true", (true & true));
+
+        // create truth table for | (boolean logical inclusive OR) operator
+        System.out.printf("%s%n%s: %b%n%s: %b%n%s: %b%n%s: %b%n%n",
+                "Boolean logical inclusive OR (|)",
+                "false | false", (false | false),
+                "false | true", (false | true),
+                "true | false", (true | false),
+                "true | true", (true | true));
     }
 }
