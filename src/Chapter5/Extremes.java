@@ -12,5 +12,22 @@ public class Extremes {
 
         System.out.println("Enter the values: ");
         int next = input.nextInt();
+
+        int minimum = next;
+        int maximum = next;
+
+        while (i < counter) {
+            next = input.nextInt();
+
+            if (next < minimum) {
+                minimum = next;
+            }
+
+            if (next > maximum) {
+                maximum = next;
+            }
+
+            i++;
+        }
     }
 }
