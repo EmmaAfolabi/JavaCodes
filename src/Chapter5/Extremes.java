@@ -7,7 +7,7 @@ public class Extremes {
         int i = 1;
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Enter the number of values: ");
+        System.out.println("Enter the number of integers you want to input: ");
         int counter = input.nextInt();
 
         System.out.println("Enter the values: ");
@@ -36,4 +36,8 @@ public class Extremes {
         System.out.printf("Sum of minimum and maximum values: %d%n", sum);
     }
 
+    public static void main(String[] args) {
+        Extremes indent = new Extremes();
+        indent.findMinMaxSum();
+    }
 }
