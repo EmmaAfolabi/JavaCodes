@@ -29,5 +29,11 @@ public class Extremes {
 
             i++;
         }
+
+        int sum = minimum + maximum;
+        System.out.printf("Minimum value is %d%n", minimum);
+        System.out.printf("Largest value is %d%n", maximum);
+        System.out.printf("Sum of minimum and maximum values: %d%n", sum);
     }
+
 }
