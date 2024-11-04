@@ -1,5 +1,7 @@
 package Chapter5;
 
+import java.util.Scanner;
+
 public class BarChart {
 
     public void printBarChart(int one, int two, int three, int four, int five)
@@ -18,6 +20,25 @@ public class BarChart {
                 value = four;
             else if (counter == 5)
                 value = five;
+
+            for (int i = value; i > 0; i--)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+            counter++;
         }
+    }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        BarChart graph = new BarChart();
+
+        System.out.println("Enter the number from 1 - 30");
+        int num1 = input.nextInt();
+
+        System.out.println("Enter the number from 1 - 30");
+        int num2 = input.nextInt();
     }
 }
