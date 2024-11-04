@@ -39,5 +39,10 @@ public class StudentGrades {
                     break;
             }
         }
+
+        System.out.println("Number of students with grade 'A': "+ countA);
+        System.out.println("Number of students with grade 'B': "+ countB);
+        System.out.println("Number of students with grade 'C': "+ countC);
+        System.out.println("Number of students with grade 'D': "+ countD);
     }
 }
