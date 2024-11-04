@@ -40,5 +40,16 @@ public class BarChart {
 
         System.out.println("Enter the number from 1 - 30");
         int num2 = input.nextInt();
+
+        System.out.println("Enter the number from 1 - 30");
+        int num3 = input.nextInt();
+
+        System.out.println("Enter the number from 1 - 30");
+        int num4 = input.nextInt();
+
+        System.out.println("Enter the number from 1 - 30");
+        int num5 = input.nextInt();
+
+        graph.printBarChart(num1, num2, num3, num4, num5);
     }
 }
