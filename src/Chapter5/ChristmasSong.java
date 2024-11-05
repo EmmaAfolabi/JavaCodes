@@ -25,9 +25,26 @@ public class ChristmasSong {
                 case 6:
                     System.out.println("On the sixth day of Christmas my true love sent to me");
                     break;
-
-
+                case 7:
+                    System.out.println("On the seventh day of Christmas my true love sent to me");
+                    break;
+                case 8:
+                    System.out.println("On the eighth day of Christmas my true love sent to me");
+                    break;
+                case 9:
+                    System.out.println("On the ninth day of Christmas my true love sent to me");
+                    break;
+                case 10:
+                    System.out.println("On the tenth day of Christmas my true love sent to me");
+                    break;
+                case 11:
+                    System.out.println("On the eleventh day of Christmas my true love sent to me");
+                    break;
+                case 12:
+                    System.out.println("On the twelfth day of Christmas my true love sent to me");
             }
+
+
         }
     }
 }
