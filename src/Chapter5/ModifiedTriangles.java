@@ -35,6 +35,7 @@ public class ModifiedTriangles {
                 System.out.print("*");
             }
             System.out.println();
+            A += 1; B -= 1; E += 2; F -= 1;
         }
     }
 }
