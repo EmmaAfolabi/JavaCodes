@@ -9,6 +9,24 @@ public class ChristmasSong {
             switch (days) {
                 case 1:
                     System.out.println("On the first day of Christmas my true love sent to me");
+                    break;
+                case 2:
+                    System.out.println("On the second day of Christmas my true love sent to me");
+                    break;
+                case 3:
+                    System.out.println("On the third day of Christmas my true love sent to me");
+                    break;
+                case 4:
+                    System.out.println("On the fourth day of Christmas my true love sent to me");
+                    break;
+                case 5:
+                    System.out.println("On the fifth day of Christmas my true love sent to me");
+                    break;
+                case 6:
+                    System.out.println("On the sixth day of Christmas my true love sent to me");
+                    break;
+
+
             }
         }
     }
