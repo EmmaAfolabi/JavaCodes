@@ -19,4 +19,11 @@ public class Pythagoras {
             }
         }
     }
+
+    public static void main(String[] args) {
+
+        Pythagoras system = new Pythagoras();
+
+        system.checkTriples();
+    }
 }
