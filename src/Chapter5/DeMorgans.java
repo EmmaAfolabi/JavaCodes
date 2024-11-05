@@ -17,5 +17,8 @@ public class DeMorgans {
 
         System.out.println("Equivalent expressions:");
         System.out.println((x >= 5) || (y < 7));
+        System.out.println((a != b) || (g == 5));
+        System.out.println((x > 8) || (y <= 4));
+        System.out.println((i <= 4) && (j > 6));
     }
 }
