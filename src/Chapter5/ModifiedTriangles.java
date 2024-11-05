@@ -22,6 +22,19 @@ public class ModifiedTriangles {
             for (int a = E; a > 0; a--) {
                 System.out.print(" ");
             }
+            //Triangle C
+            for (int c = B; c > 0; c--) {
+                System.out.print("*");
+            }
+            //spaces
+            for (int a = F; a > 0; a--) {
+                System.out.print(" ");
+            }
+            //Triangle D
+            for (int n = A; n > 0; n--) {
+                System.out.print("*");
+            }
+            System.out.println();
         }
     }
 }
