@@ -22,6 +22,21 @@ public class ModifiedDiamond {
 
                 System.out.print("*");
             }
+
+            System.out.println();
+            if (d > div) {
+
+                tabs += 1;
+            }
+            else
+                tabs -= 1;
+
+            if (d > div) {
+
+                star -= 2;
+            }
+            else
+                star += 2;
         }
     }
 }
