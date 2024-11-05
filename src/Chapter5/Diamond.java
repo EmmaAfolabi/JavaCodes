@@ -4,12 +4,18 @@ public class Diamond {
     public static void main(String[] args) {
         int n = 5;
 
-        //top half of the diamond
+        // top half of the diamond
         for (int i = 1; i <= n; i++) {
-            //print leading spaces
+            // print leading spaces
             for (int j = n; j > i; j--) {
                 System.out.print(" ");
             }
+            // print asterisks
+            for (int k = 1; k <= (2 * i - 1); k++) {
+                System.out.print("*");
+            }
+            // move to the next line
+            System.out.println();
         }
     }
 }
