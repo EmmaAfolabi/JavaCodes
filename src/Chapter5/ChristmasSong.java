@@ -85,4 +85,9 @@ public class ChristmasSong {
             days++;
         }
     }
+
+    public static void main(String[] args) {
+        ChristmasSong chorus = new ChristmasSong();
+        chorus.displayChristmasSong();
+    }
 }
