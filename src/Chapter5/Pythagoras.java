@@ -10,10 +10,13 @@ public class Pythagoras {
             side1 = a * a;
             for (int b = 1; b <= 500; b++) {
                 side2 = b * b;
-            }
                 for (int c = 1; c <= 500; c++) {
                     hypotenus = c * c;
+                    if (side1 + side2 == hypotenus) {
+                        System.out.printf("%5d%10d%15d%n", a, b, c);
+                    }
                 }
+            }
         }
     }
 }
