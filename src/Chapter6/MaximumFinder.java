@@ -16,9 +16,9 @@ public class MaximumFinder {
 
         //determine the maximum value
         double result = maximum(number1, number2, number3);
-
+        //MaximumFinder.maximum(10, 30, 20);
         // display maximum value
-        System.out.printf("Maximum is: %.2f%n", result);
+        System.out.println("Maximum is: " + result);
     }
 
     // returns the maximum of it's three double parameters
