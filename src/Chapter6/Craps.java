@@ -17,4 +17,13 @@ public class Craps {
     private static final int BOX_CARS = 12;
 
     // plays one game of craps
+    public static void main(String[] args) {
+        int myPoint = 0;  // point if no win or loss on first roll
+        status = gameStatus;  // can contain CONTINUE, WON or LOST
+
+        int sumOfDice = rollDice();  // first roll of the dice
+
+        // determine game status and point based on first roll
+
+    }
 }
