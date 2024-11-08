@@ -24,6 +24,21 @@ public class Craps {
         int sumOfDice = rollDice();  // first roll of the dice
 
         // determine game status and point based on first roll
-
+        switch (sumOfDice) {
+            case SEVEN :  // win with 7 on first roll
+            case YO_LEVEN:  // win with 11 on first roll
+                gameStatus = Status.WON;
+                break;
+            case SNAKE_EYES:  // lose with 2 on first roll
+            case TREY:  // lose with 3 on first roll
+            case BOX_CARS:  // lose with 12 on first roll
+                gameStatus = Status.LOST;
+                break;
+            default: // did not win or lose, so remember point
+                gameStatus = Status.CONTINUE;  // game is not over
+                myPoint = sumOfDice;  // remember the point
+                System.out.printf("Point is %d%n", myPoint);
+                break;
+        }
     }
 }
