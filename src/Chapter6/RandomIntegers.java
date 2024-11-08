@@ -7,5 +7,12 @@ public class RandomIntegers {
         // randomNumbers object will produce secure random numbers
         SecureRandom randomNumbers = new SecureRandom();
 
+        // loop 20 times
+        for (int counter = 1; counter <= 20; counter++) {
+            // picks random integer from 1 to 6
+            int face = 1 + randomNumbers.nextInt(6);
+
+            System.out.printf("%d  ", face);
+        }
     }
 }
