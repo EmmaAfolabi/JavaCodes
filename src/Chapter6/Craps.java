@@ -40,5 +40,23 @@ public class Craps {
                 System.out.printf("Point is %d%n", myPoint);
                 break;
         }
+
+        // while game is not complete
+        while (gameStatus == Status.CONTINUE) {  // not WON or LOST
+            sumOfDice = rollDice();  // roll dice again
+
+            // determine game status
+            if (sumOfDice == myPoint) {  // win by making point
+                gameStatus = Status.WON;
+            }
+            else {
+                if (sumOfDice == SEVEN) {  // lose by rolling 7 before point
+                    gameStatus = Status.LOST;
+                }
+            }
+        }
+
+        // display won or lost message
+
     }
 }
