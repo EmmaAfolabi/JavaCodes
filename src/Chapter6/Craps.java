@@ -10,4 +10,11 @@ public class Craps {
     private enum Status {CONTINUE, WON, LOST};
 
     // constants that represents common roles of the dice
+    private static final int SNAKE_EYES = 2;
+    private static final int TREY = 3;
+    private static final int SEVEN = 7;
+    private static final int YO_LEVEN = 11;
+    private static final int BOX_CARS = 12;
+
+    // plays one game of craps
 }
