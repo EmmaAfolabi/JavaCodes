@@ -19,7 +19,7 @@ public class Craps {
     // plays one game of craps
     public static void main(String[] args) {
         int myPoint = 0;  // point if no win or loss on first roll
-        status = gameStatus;  // can contain CONTINUE, WON or LOST
+        Status gameStatus;  // can contain CONTINUE, WON or LOST
 
         int sumOfDice = rollDice();  // first roll of the dice
 
@@ -57,6 +57,16 @@ public class Craps {
         }
 
         // display won or lost message
+        if (gameStatus == Status.WON) {
+            System.out.println("Player wins");
+        }
+        else {
+            System.out.println("Player loses");
+        }
+    }
+
+    // roll dice, calculate sum and display results
+    public static int rollDice() {
 
     }
 }
