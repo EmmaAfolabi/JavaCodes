@@ -33,6 +33,10 @@ public class Scope {
 
     // modify class Scope's field x during each call
     public static void useField() {
-
+        System.out.printf(
+                "%nfield x on entering method useField is %d%n", x);
+        x *= 10;
+        System.out.printf(
+                "field x before exiting method useField is %d%n", x);
     }
 }
