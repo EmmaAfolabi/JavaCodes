@@ -7,7 +7,7 @@ public class Craps {
     private static final SecureRandom randomNumbers = new SecureRandom();
 
     // enum type with constants that represents the game status
-    private enum Status {CONTINUE, WON, LOST};
+    private enum Status {CONTINUE, WON, LOST}
 
     // constants that represents common roles of the dice
     private static final int SNAKE_EYES = 2;
