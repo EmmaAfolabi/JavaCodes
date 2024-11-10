@@ -8,5 +8,10 @@ public class MethodOverload {
         System.out.printf("Square of double 7.5 is %f%n", square(7.5));
     }
 
-
+    // square method with int argument
+    public static int square(int intValue) {
+        System.out.printf("%nCalled square with int argument: %d%n",
+                intValue);
+        return intValue * intValue;
+    }
 }
