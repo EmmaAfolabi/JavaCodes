@@ -14,4 +14,11 @@ public class MethodOverload {
                 intValue);
         return intValue * intValue;
     }
+
+    // square method with double argument
+    public static double square(double doubleValue) {
+        System.out.printf("%nCalled square with double argument: %f%n",
+                doubleValue);
+        return doubleValue * doubleValue;
+    }
 }
