@@ -12,5 +12,8 @@ public class MathTest {
         System.out.printf("Math.exp(2.0) = %f%n", Math.exp(2.0));
         System.out.printf("Math.floor(9.2) = %f%n", Math.floor(9.2));
         System.out.printf("Math.floor(-9.8) = %f%n", Math.floor(-9.8));
+        System.out.printf("Math.log(Math.E) = %f%n", Math.log(Math.E));
+        System.out.printf("Math.log(Math.E * Math.E) = %f%n",
+                Math.log(Math.E * Math.E));
     }
 }
