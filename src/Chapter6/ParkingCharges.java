@@ -42,4 +42,8 @@ public class ParkingCharges {
     }
 
     // main method to execute the program
+    public static void main(String[] args) {
+        double totalReceipts = calculateReceipts();
+        System.out.printf("%nRunning total of yesterday's receipts is: %.2f%n", totalReceipts);
+    }
 }
