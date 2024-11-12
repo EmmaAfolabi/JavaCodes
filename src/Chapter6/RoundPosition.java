@@ -34,16 +34,16 @@ public class RoundPosition {
         Scanner input = new Scanner(System.in);
 
         System.out.println("Enter value: ");
-        double y = input.nextDouble();
+        double x = input.nextDouble();
 
-        System.out.println("Original value is: " + y);
+        System.out.println("Original value is: " + x);
 
-        System.out.println("value rounded to the nearest integer is: " + roundToInteger(y));
+        System.out.println("value rounded to the nearest integer is: " + roundToInteger(x));
 
-        System.out.println("value rounded to the nearest tenth is: " + roundToTenths(y));
+        System.out.println("value rounded to the nearest tenth is: " + roundToTenths(x));
 
-        System.out.println("value rounded to the nearest hundreths is: " + roundToHundredths(y));
+        System.out.println("value rounded to the nearest hundredths is: " + roundToHundredths(x));
 
-        System.out.println();
+        System.out.println("value rounded to the nearest thousandths is: " + roundToThousandths(x));
     }
 }
