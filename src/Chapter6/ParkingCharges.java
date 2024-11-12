@@ -33,7 +33,7 @@ public class ParkingCharges {
             hours = input.nextInt();
 
             double charge = calculateCharges(hours);
-            System.out.printf("Customer charge is: %.2f%n", charge);
+            System.out.printf("Customer charge is: $%.2f%n", charge);
             receiptTotal += charge;
         }
 
@@ -44,6 +44,6 @@ public class ParkingCharges {
     // main method to execute the program
     public static void main(String[] args) {
         double totalReceipts = calculateReceipts();
-        System.out.printf("%nRunning total of yesterday's receipts is: %.2f%n", totalReceipts);
+        System.out.printf("%nRunning total of yesterday's receipts is: $%.2f%n", totalReceipts);
     }
 }
