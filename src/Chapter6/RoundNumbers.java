@@ -2,7 +2,7 @@ package Chapter6;
 
 import java.util.Scanner;
 
-public class RoundingNumbers {
+public class RoundNumbers {
 
     public static void main(String[] args) {
 
