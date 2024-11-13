@@ -47,5 +47,8 @@ public class Expponentiation {
         // Test myFloor and myCeil methods
         System.out.println("Enter a positive double: ");
         double num = in.nextDouble();
+
+        System.out.printf("myFloor(%f) = %d%n", num, myFloor(num));
+        System.out.printf("myCeil(%f) = %d%n", num, myCeil(num));
     }
 }
