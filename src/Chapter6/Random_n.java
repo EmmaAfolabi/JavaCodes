@@ -22,6 +22,6 @@ public class Random_n {
         System.out.println("Secure random number between -5 and 1: " + e);
 
         int f = secureRandom.nextInt(12) - 2;
-        System.out.println("Secure random number between -2 and 9: " + n);
+        System.out.println("Secure random number between -2 and 9: " + f);
     }
 }
