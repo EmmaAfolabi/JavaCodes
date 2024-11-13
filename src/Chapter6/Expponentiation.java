@@ -14,5 +14,19 @@ public class Expponentiation {
     }
 
     // method to calculate the largest integer less than or equal to num
+    public static int myFloor(double num) {
+        int floor = (int) num;
+        if (num < floor) {
+            floor--;
+        }
+        return floor;
+    }
 
+    public static int myCeil(double num) {
+        int ceil = (int) num;
+        if (num > ceil) {
+            ceil++;
+        }
+        return ceil;
+    }
 }
