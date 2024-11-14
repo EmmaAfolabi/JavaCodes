@@ -1,5 +1,7 @@
 package Chapter6;
 
+import java.util.Scanner;
+
 public class SquareOfcharacter {
 
     public static void displayCharacter(char fill, int size) {
@@ -11,5 +13,12 @@ public class SquareOfcharacter {
             }
             System.out.println();
         }
+    }
+    public static void main(String[] args) {
+
+
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("Enter shape fill");
     }
 }
