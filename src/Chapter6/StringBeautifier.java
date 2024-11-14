@@ -20,9 +20,23 @@ public class StringBeautifier {
         return input;
     }
 
+    // Method to beautify the string by calling the above two methods
+    public static String beautifyString(String input) {
+        input = ensureFullStop(input);
+        input = capitalizeFirstLetter(input);
+        return input;
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println();
+        System.out.println("Enter a string: ");
+        String input = scanner.nextLine();
+
+        // Beautify the string
+        String beautifiedString = beautifyString(input);
+
+        // Output the beautified string
+        System.out.println("Beautified string: " + beautifiedString);
     }
 }
