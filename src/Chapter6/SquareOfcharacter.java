@@ -19,6 +19,13 @@ public class SquareOfcharacter {
 
         Scanner in = new Scanner(System.in);
 
-        System.out.println("Enter shape fill");
+        System.out.println("Enter shape fill: ");
+        char fill = in.next().charAt(0);
+
+        System.out.println("Enter shape size: ");
+        int size = in.nextInt();
+
+
+        displayCharacter(fill, size);
     }
 }
