@@ -1,5 +1,7 @@
 package Chapter6;
 
+import java.util.Scanner;
+
 public class LeapYear {
 
     // method to check if a year is a leap year
@@ -13,6 +15,19 @@ public class LeapYear {
             }
         } else {
             return false;  // Not divisible by 4
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter a year: ");
+        int year = scanner.nextInt();
+
+        if (isLeapYear(year)) {
+            System.out.println(year + " " + "is a leap year");
+        } else {
+            System.out.println(year + " " + "is not a leap year");
         }
     }
 }
