@@ -15,8 +15,16 @@ public class PrimeNumbers {
         return true;
     }
 
+    public static void printPrimes(int max) {
+        for (int i = 2; i < max; i++) {
+            if (findPrime(i)) {
+                System.out.println(i + " ");
+            }
+        }
+        System.out.println();
+    }
+
     public static void main(String[] args) {
-        System.out.println(findPrime(11));
-        System.out.println(findPrime(4));
+        printPrimes(10000);
     }
 }
