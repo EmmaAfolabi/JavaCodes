@@ -1,5 +1,7 @@
 package Chapter6;
 
+import java.util.Scanner;
+
 public class WeatherForSports {
 
     // Method to recommend sports activity based on temperature
@@ -14,6 +16,14 @@ public class WeatherForSports {
     }
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
+        System.out.println("Enter the temperature in Celsius:");
+        int temperature = scanner.nextInt();
+
+        String recommendation = sportsRecommender(temperature);
+        System.out.println(recommendation);
+
+        scanner.close();
     }
 }
