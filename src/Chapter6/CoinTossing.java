@@ -1,6 +1,7 @@
 package Chapter6;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class CoinTossing {
 
@@ -24,5 +25,22 @@ public class CoinTossing {
         Random game = new Random();
         int value = game.nextInt(2);
         return (value == 1) ? Coins.HEADS : Coins.TAILS;
+    }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int choice;
+        do {
+            System.out.println("1.  Toss Coin");
+            System.out.println("2.  Exit");
+            System.out.print("Choose an option: ");
+            choice = input.nextInt();
+            if (choice == 1) {
+                System.out.print("How many times do you want to toss the coin ? ");
+                int count = input.nextInt();
+                tossCoin(count);
+            }
+        } while (choice != 2);
+        input.close();
     }
 }
