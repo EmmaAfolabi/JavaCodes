@@ -1,5 +1,7 @@
 package Chapter6;
 
+import java.util.Scanner;
+
 public class GreatestCommonDivisor {
 
     // Calculates and returns the greatest common divisor between two numbers using Euclidean algorithm
@@ -10,5 +12,18 @@ public class GreatestCommonDivisor {
             num1 = temp;
         }
         return num1;
+    }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter two numbers: ");
+        int num1 = input.nextInt();
+        int num2 = input.nextInt();
+
+        int gcd = findGCD(num1, num2);
+        System.out.printf("GCD(%d, %d) = %d%n", num1, num2, gcd);
+
+        input.close();
     }
 }
