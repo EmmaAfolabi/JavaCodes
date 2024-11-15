@@ -14,4 +14,9 @@ public class PrimeNumbers {
         }
         return true;
     }
+
+    public static void main(String[] args) {
+        System.out.println(findPrime(11));
+        System.out.println(findPrime(4));
+    }
 }
