@@ -9,8 +9,8 @@ public class SumOfDigits {
         int sum = 0;
 
         while (number != 0) {
-            sum += number % 10;
-            number /= 10;
+            sum += number % 10;   // Get last digit and add it to sum
+            number /= 10;        // Remove the last digit
         }
 
         return sum;
