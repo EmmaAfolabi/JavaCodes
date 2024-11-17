@@ -1,5 +1,6 @@
 package Chapter6;
 
+import java.security.SecureRandom;
 import java.util.Scanner;
 
 public class GuessingGame {
@@ -15,7 +16,7 @@ public class GuessingGame {
         Mode range = Mode.Default;
 
         while (play == 1) {
-            System.out.println("Guess a number between 1 -" + MAX_NUMBER);
+            System.out.printf("Guess a number between 1 - %d:", MAX_NUMBER);
             value = generateNumbers(MAX_NUMBER);
 
             do {
@@ -40,7 +41,7 @@ public class GuessingGame {
             } else if (tries == 10) {
                 System.out.println("Aha! you know the secret! \n");
             } else {
-                System.out.println("You should eb able to do better\n");
+                System.out.println("You should be able to do better\n");
             }
 
             tries = 0;
@@ -50,5 +51,14 @@ public class GuessingGame {
         }
         System.out.print("Goodbye!!");
         input.close();
+    }
+
+    public static int generateNumbers(int maxNumber) {
+        SecureRandom digit = new SecureRandom();
+        return 1 + digit.nextInt(maxNumber);
+    }
+
+    public static void main(String[] args) {
+        GuessingGame.guessingGame();
     }
 }
