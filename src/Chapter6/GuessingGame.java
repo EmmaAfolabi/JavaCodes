@@ -9,6 +9,7 @@ public class GuessingGame {
 
     public static void guessingGame() {
         final int MAX_NUMBER = 1000;
+        final int MAX_TRIES = 10;  // set the maximum number of trials to 10
         Scanner input = new Scanner(System.in);
 
         int guess, play = 1, tries = 0;
@@ -21,6 +22,7 @@ public class GuessingGame {
 
             do {
                 guess = input.nextInt();
+                tries++;
 
                 if (guess > value) {
                     range = Mode.High;
@@ -33,7 +35,13 @@ public class GuessingGame {
                     System.out.printf("Congratulations. You guessed the number!!%n%n");
                     break;
                 }
-                tries++;
+
+                if (tries > MAX_TRIES) {
+                    System.out.println("Sorry, you've exceeded the maximum number of trials. The game will end now.");
+                    System.out.printf("The correct number was %d.%n%n", value);
+                    break;
+                }
+                //tries++;
             } while (range != Mode.Yes);
 
             if (tries <= 10) {
@@ -42,6 +50,10 @@ public class GuessingGame {
                 System.out.println("Aha! you know the secret! \n");
             } else {
                 System.out.println("You should be able to do better\n");
+            }
+
+            if (tries > MAX_TRIES) {
+                break;
             }
 
             tries = 0;
