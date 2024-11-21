@@ -44,7 +44,13 @@ public class GuessingGame {
                 //tries++;
             } while (range != Mode.Yes);
 
-            if (tries <= 10) {
+            if (range == Mode.Yes) {
+                System.out.printf("You guessed the correct number in %d tries!%n%n", tries);
+            } else if (tries > MAX_TRIES) {
+                System.out.println("You should be able to do better");
+            }
+
+            /* if (tries <= 10) {
                 System.out.println("Either you know the secret or you got lucky!\n");
             } else if (tries == 10) {
                 System.out.println("Aha! you know the secret! \n");
@@ -54,7 +60,7 @@ public class GuessingGame {
 
             if (tries > MAX_TRIES) {
                 break;
-            }
+            } */
 
             tries = 0;
             range = Mode.Default;
