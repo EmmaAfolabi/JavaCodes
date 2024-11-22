@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class ComputerAssistedInstruction {
 
-    static SecureRandom randomNumbers = new SecureRandom();
+    static SecureRandom numbers = new SecureRandom();
     static Scanner input = new Scanner(System.in);
 
     private static int level = 1;
@@ -31,5 +31,19 @@ public class ComputerAssistedInstruction {
         int product = digit1 * digit2;
 
         return product;
+    }
+
+    public static void main(String[] args) {
+        while (true) {
+            int correctAnswer = generateMultiplication();
+
+            int userAnswer = input.nextInt();
+
+            if (userAnswer == correctAnswer) {
+                System.out.println("Very good!");
+            } else {
+                System.out.printf("No. Please try again.%nThe correct answer is %d.%n", correctAnswer);
+            }
+        }
     }
 }
