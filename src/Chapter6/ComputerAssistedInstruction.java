@@ -4,39 +4,32 @@ import java.security.SecureRandom;
 import java.util.Scanner;
 
 public class ComputerAssistedInstruction {
-    private static Scanner input = new Scanner(System.in);
-    private static SecureRandom randomNumbers = new SecureRandom();
-    static int randomValue;
-    static int randomValue2;
-    static int userMyInput;
 
-    public static void main(String[] args) {
-        String prompt = """
-                Welcome to the application of multiplication
-                """;
-        System.out.println(prompt);
-        newQuestions();
-        userMyInput = input.nextInt();
-        int totalRandomValue = randomValue * randomValue2;
-        answerToQuestion(userMyInput, totalRandomValue);
-    }
+    static SecureRandom randomNumbers = new SecureRandom();
+    static Scanner input = new Scanner(System.in);
 
-    public static void newQuestions() {
-        randomValue = 1 + randomNumbers.nextInt(9);
-        randomValue2 = 1 + randomNumbers.nextInt(9);
-        System.out.println("How much is " + randomValue + " times " + randomValue2 + " ?");
-        userMyInput = input.nextInt();
-        answerToQuestion(userMyInput, randomValue * randomValue2);
-    }
+    private static int level = 1;
 
-    public static void answerToQuestion(int userInput, int totalRandomValues) {
-        if (userInput == totalRandomValues) {
-            System.out.println("Good work!");
-            newQuestions();
-        } else {
-            System.out.println("Try again");
-            userInput = input.nextInt();
-            answerToQuestion(userInput, randomValue * randomValue2);
+    public static int generateMultiplication() {
+        int digit1 = 0;
+        int digit2 = 0;
+
+        if (level == 1) {
+            digit1 = 1 + numbers.nextInt(9);
+            digit2 = 1 + numbers.nextInt(9);
         }
+        else if (level == 2) {
+            digit1 = 1 + numbers.nextInt(90);
+            digit2 = 1 + numbers.nextInt(90);
+        }
+        else if (level == 3) {
+            digit1 = 1 + numbers.nextInt(900);
+            digit2 = 1 + numbers.nextInt(900);
+        }
+
+        System.out.printf("How much is %d times %d ?%n", digit1, digit2);
+        int product = digit1 * digit2;
+
+        return product;
     }
 }
