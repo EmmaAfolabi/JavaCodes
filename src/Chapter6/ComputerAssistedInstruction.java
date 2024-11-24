@@ -100,6 +100,55 @@ public class ComputerAssistedInstruction {
         }
 
         return quotient;
+
+    }
+    public static double generaterandom() {
+
+        int operation = 1 + numbers.nextInt(4);
+
+        double arithmetic = 0;
+        switch (operation) {
+            case 1:
+                return generateMultiplication();
+            case 2:
+                return generateAddition();
+            case 3:
+                return generateSubtraction();
+            case 4:
+                return generateDivision();
+
+            default:
+                return arithmetic;
+        }
+
+
+
+
+    }
+    public static double generateQuestion(int arithmeticType) {
+        int question = 0;
+        switch (arithmeticType) {
+            case 1:
+                return generateMultiplication();
+
+            case 2:
+                return generateAddition();
+
+            case 3:
+                return generateSubtraction();
+
+            case 4:
+                return generateDivision();
+
+            case 5:
+                return generaterandom();
+
+            default:
+                return question;
+        }
+    }
+    public static void assessStudent() {
+
     }
 
     public static void main(String[] args) {
