@@ -149,6 +149,125 @@ public class ComputerAssistedInstruction {
     }
     public static void assessStudent() {
 
+        int correct = 0;
+        int counter = 1;
+        double answer;
+        double guess;
+        int type;
+        int tries = 0;
+
+        System.out.printf("%s%n%s%n", "Computer Assisted Instruction","Enter 'b' to begin study and 'q' to quit");
+        char begin = input.next().charAt(0);
+
+        while (begin != 'q') {
+            System.out.printf("%s%n%s%20s%20s%20s%15s%n", "Choose Arithmetic Problem to Study",
+                            "Multiplication -1", "Addition -2", "Subtraction -3","Division -4", "Random -5");
+                            type = input.nextInt();
+
+            System.out.printf("%s%n%s%15s%15s%n", "Select difficulty level",
+                                                    "1- Easy","2- Medium","3- Hard");
+                            level = input.nextInt();
+
+                    while (counter <= 10) {
+                        answer = generateQuestion(type);
+
+                        guess = input.nextDouble();
+
+                        if (guess == answer) {
+                            System.out.println();
+                            correct++;
+                        }
+                        else {
+                            System.out.println();
+                            guess = input.nextDouble();
+                            while (guess != answer) {
+                                System.out.println();
+                                guess = input.nextDouble();
+                            }
+
+                            if (guess == answer) {
+                                System.out.println();
+                            }
+                        }
+
+                            counter++;
+
+                    }
+
+                    if (counter >= 10) {
+                        checkPercentage(correct);
+                        correct = 0;
+                        counter = 1;
+                    }
+            System.out.println("Enter b to continue study or q to quit: ");
+                    begin = input.next().charAt(0);
+
+        }
+
+    }
+    public static String generateCredits() {
+        int select = 1 + numbers.nextInt(4);
+
+        String response = " ";
+        String response1 = "Very good!";
+        String response2 = "Excellent";
+        String response3 = "Nice work!";
+        String response4 = "Keep up the good work!";
+
+        switch (select) {
+            case 1:
+                response = response1;
+                break;
+
+            case 2:
+                response = response2;
+                break;
+
+            case 3:
+                response = response3;
+                break;
+
+            case 4:
+                response = response4;
+
+        }
+        return response;
+
+    }
+
+    public static String generateRemarks() {
+        int select = 1 + numbers.nextInt(4);
+
+        String remark = " ";
+        String remark1 = "No. Please try again";
+        String remark2 = "Wrong. Try once more";
+        String remark3 = "Don't give up!";
+        String remark4 = "No. Keep trying.";
+
+        switch (select) {
+            case 1:
+                remark = remark1;
+                break;
+
+            case 2:
+                remark = remark2;
+                break;
+
+            case 3:
+                remark = remark3;
+                break;
+
+            case 4:
+                remark = remark4;
+
+
+        }
+        return remark;
+
+    }
+
+    public static void checkPercentage(int correctTries) {
+
     }
 
     public static void main(String[] args) {
