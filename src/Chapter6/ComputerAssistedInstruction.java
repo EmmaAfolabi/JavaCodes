@@ -146,6 +146,7 @@ public class ComputerAssistedInstruction {
             default:
                 return question;
         }
+
     }
     public static void assessStudent() {
 
@@ -174,23 +175,23 @@ public class ComputerAssistedInstruction {
                         guess = input.nextDouble();
 
                         if (guess == answer) {
-                            System.out.println();
+                            System.out.println(generateCredits());
                             correct++;
                         }
                         else {
-                            System.out.println();
+                            System.out.println(generateRemarks());
                             guess = input.nextDouble();
                             while (guess != answer) {
-                                System.out.println();
+                                System.out.println(generateRemarks());
                                 guess = input.nextDouble();
                             }
 
                             if (guess == answer) {
-                                System.out.println();
+                                System.out.println(generateCredits());
                             }
                         }
 
-                            counter++;
+                        counter++;
 
                     }
 
@@ -199,7 +200,7 @@ public class ComputerAssistedInstruction {
                         correct = 0;
                         counter = 1;
                     }
-            System.out.println("Enter b to continue study or q to quit: ");
+                    System.out.println("Enter b to continue study or q to quit: ");
                     begin = input.next().charAt(0);
 
         }
@@ -267,20 +268,20 @@ public class ComputerAssistedInstruction {
     }
 
     public static void checkPercentage(int correctTries) {
+        double percent = (double) correctTries / 10;
+
+                if (percent > 0.75) {
+                    System.out.println("\nCongratulations, you are ready to go the next level!");
+                }
+                else if (percent < 0.75) {
+                    System.out.println("\nPlease ask your teacher for extra help");
+
+                }
 
     }
 
     public static void main(String[] args) {
-        while (true) {
-            int correctAnswer = generateMultiplication();
-
-            int userAnswer = input.nextInt();
-
-            if (userAnswer == correctAnswer) {
-                System.out.println("Very good!");
-            } else {
-                System.out.printf("No. Please try again.%nThe correct answer is %d.%n", correctAnswer);
-            }
-        }
+        // call assessStudent to start the program
+        assessStudent();
     }
 }
