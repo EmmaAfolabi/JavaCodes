@@ -2,6 +2,9 @@ package Chapter6;
 
 import java.security.SecureRandom;
 import java.util.Scanner;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 public class GuessingGame {
 
@@ -10,6 +13,7 @@ public class GuessingGame {
     public static void guessingGame() {
         final int MAX_NUMBER = 1000;
         final int MAX_TRIES = 10;  // set the maximum number of trials to 10
+        final int TIME_LIMIT = 60; // Time limit in seconds
         Scanner input = new Scanner(System.in);
 
         int guess, play = 1, tries = 0;
@@ -19,6 +23,14 @@ public class GuessingGame {
         while (play == 1) {
             System.out.printf("Guess a number between 1 - %d:", MAX_NUMBER);
             value = generateNumbers(MAX_NUMBER);
+
+            // Start the timer
+            ScheduledExecutorService executorService = Executors.newScheduledThreadPool(1);
+            final boolean[] timeUp = {false};
+            executorService.schedule(() -> {
+                timeUp[0] = true;
+                System.out.println("\nTime's up");
+            }, TIME_LIMIT, TimeUnit.SECONDS);
 
             do {
                 guess = input.nextInt();
@@ -44,9 +56,11 @@ public class GuessingGame {
                 //tries++;
             } while (range != Mode.Yes);
 
+            executorService.shutdown();
+
             if (range == Mode.Yes) {
                 System.out.printf("You guessed the correct number in %d tries!%n%n", tries);
-            } else if (tries > MAX_TRIES) {
+            } else if (tries > MAX_TRIES || timeUp[0]) {
                 System.out.println("You should be able to do better");
             }
 
