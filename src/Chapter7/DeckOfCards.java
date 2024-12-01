@@ -17,6 +17,14 @@ public class DeckOfCards {
         String[] suits = {"Hearts", "Diamonds", "Clubs", "Spades"};
 
         // populate deck with Card objects
+        for (int count = 0; count < deck.length; count++) {
+            deck[count] =
+                    new Card(faces[count % 13], suits[count / 13]);
+        }
+    }
+
+    // shuffle deck of Cards with one-pass algorithm
+    public void shuffle() {
 
     }
 }
