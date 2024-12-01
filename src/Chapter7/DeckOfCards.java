@@ -25,6 +25,18 @@ public class DeckOfCards {
 
     // shuffle deck of Cards with one-pass algorithm
     public void shuffle() {
+        // next call to method dealCard should start at deck[0] again
+        currentCard = 0;
 
+        // for each Card, pick another random Card (0-51) and swap them
+        for (int first = 0; first < deck.length; first++) {
+            // select a random number between 0 and 51
+            int second = randomNumbers.nextInt(NUMBER_OF_CARDS);
+
+            // swap current Card with randomly selected Card
+            Card temp = deck[first];
+            deck[first] = deck[second];
+            deck[second] = temp;
+        }
     }
 }
