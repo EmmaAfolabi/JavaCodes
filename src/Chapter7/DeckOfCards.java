@@ -39,4 +39,15 @@ public class DeckOfCards {
             deck[second] = temp;
         }
     }
+
+    // deal one Card
+    public Card dealCard() {
+        // determine whether Cards remain to be dealt
+        if (currentCard < deck.length) {
+            return deck[currentCard++];  // return current Card in array
+        }
+        else {
+            return null;  // return null to indicate that all Cards were dealt
+        }
+    }
 }
