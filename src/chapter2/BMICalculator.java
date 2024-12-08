@@ -7,9 +7,11 @@ public class BMICalculator {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+        System.out.println("Hello World, this is just a freestyle\n");
 
         System.out.println("Enter weight in kg: ");
         double weight = input.nextDouble();
+
 
         System.out.println("Enter height in m: ");
         double height = input.nextDouble();
