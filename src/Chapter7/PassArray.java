@@ -42,5 +42,7 @@ public class PassArray {
     // multiply argument by 2
     public static void modifyElement(int element) {
         element *= 2;
+        System.out.printf(
+                "Value of element in modifyElement: %d%n", element);
     }
 }
