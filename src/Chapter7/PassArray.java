@@ -39,5 +39,8 @@ public class PassArray {
         }
     }
 
-
+    // multiply argument by 2
+    public static void modifyElement(int element) {
+        element *= 2;
+    }
 }
