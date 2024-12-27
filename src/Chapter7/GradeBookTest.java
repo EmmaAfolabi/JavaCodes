@@ -8,6 +8,7 @@ public class GradeBookTest {
 
         Gradebook myGradeBook = new Gradebook(
                 "CS101 Introduction to Java Programming", gradesArray);
-        System.out.printf("");
+        System.out.printf("Welcome to the grade book for%n%s%n%n",
+                myGradeBook.getCourseName());
     }
 }
