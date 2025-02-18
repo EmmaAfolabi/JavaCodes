@@ -13,4 +13,10 @@ public class ItArray {
         System.out.printf("%nValues in array2 by row are%n");
         outputArray(array2); // displays array2 by row
     }
+
+    // output rows and columns of a two-dimensional array
+    public static void outputArray(int [][] array) {
+        // loop through array's rows
+
+    }
  }
