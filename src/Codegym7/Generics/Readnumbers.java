@@ -12,6 +12,11 @@ public class Readnumbers {
     while (true) {
         String s = reader.readLine();
         if (s.isEmpty()) break;
-        list.add(Integer.parseInt(s));
+
+        int x = Integer.parseInt(s);
+        if (x % 2 == 0)  // check that the remainder is zero when we divide by two
+            list.add(x);    // add to the end
+        else
+            list.add(0, x);  // add to the beginning
     }
 }
