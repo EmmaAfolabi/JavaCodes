@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class Readalist {
     public static void main(String[] args) throws IOException
     {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in ))2;
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in ));
         ArrayList<Integer> list = new ArrayList<Integer>() ;
 
         while (true)
@@ -17,5 +17,7 @@ public class Readalist {
             if (s.isEmpty()) break;
             list.add(Integer.parseInt(s));
         }
+
+        System.out.println("Numbers entered: " + list);
     }
 }
