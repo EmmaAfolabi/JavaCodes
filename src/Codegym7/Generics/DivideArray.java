@@ -21,5 +21,9 @@ public class DivideArray {
             else
                 odd.add(x);
         }
+
+        System.out.println("Original list: " + list);
+        System.out.println("Even numbers: " + even);
+        System.out.println("Odd numbers: " + odd);
     }
 }
