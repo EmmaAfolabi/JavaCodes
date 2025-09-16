@@ -1,9 +1,10 @@
 package Codegym7.Generics;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class DivideArray {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         int[] data = {1, 5, 6, 11, 3, 15, 7, 8};
 
         ArrayList<Integer> list = new ArrayList<Integer> ();
