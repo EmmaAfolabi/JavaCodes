@@ -74,5 +74,31 @@ public class Gradebook2D {
     }
 
     // determine average grade for particular set of grades
+    public double getAverage(int[] setOfGrades) {
+        int total = 0;
 
+        // sum grades for one student
+        for (int grade : setOfGrades) {
+            total += grade;
+        }
+
+        // return average of grades
+        return (double) total / setOfGrades.length;
+    }
+
+    // output bar chart displaying overall grade distribution
+    public void outputBarChart() {
+        System.out.println("Overall grade distribution:");
+
+        // stores frequency of grades in each range of 10 grades
+        int [] frequency = new int[11];
+
+        // for each grade in Gradebook, increment the appropriate frequency
+        for (int[] studentGrades : grades) {
+            for (int grade : studentGrades) {
+                ++frequency[grade / 10];
+            }
+        }
+
+    }
 }
