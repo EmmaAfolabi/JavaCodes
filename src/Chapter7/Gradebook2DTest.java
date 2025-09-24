@@ -16,6 +16,10 @@ public class Gradebook2DTest {
                                 {76, 72, 84},
                                 {87, 93, 73}};
 
+        Gradebook2D myGradebook = new Gradebook2D(
+                "CSC 101 Introduction to Java Programming", gradesArray);
+        System.out.printf("Welcome to the grade book for%n%s%n%n",
+                myGradebook.getCourseName());
     }
 
 }
