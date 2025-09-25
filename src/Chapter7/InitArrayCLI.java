@@ -15,6 +15,15 @@ public class InitArrayCLI {
             int[] array = new int[arrayLength];
 
             // get initial value and increment from command-line arguments
+            int initialValue = Integer.parseInt(args[1]);
+            int increment = Integer.parseInt(args[2]);
+
+            // calculate value for each array element
+            for (int counter = 0; counter < array.length; counter++) {
+                array[counter] = initialValue + increment * counter;
+            }
+
+            System.out.printf("%s%8s%n", "Index", "Value");
         }
     }
 }
