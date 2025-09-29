@@ -18,7 +18,15 @@ public class DuplicateElimination {
                 if (v >= 10 && v <= 100) break;
                 System.out.println("Out of range. Try again.");
             }
-            nums[i] = v;
+            nums[i] = v; // store as read; duplicates allowed for now
+        }
+
+        // Remove duplicates: for each value, mark later duplicates as -1
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == -1) continue;
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[j] == nums[i]) nums[j] = -1;
+            }
         }
     }
 }
