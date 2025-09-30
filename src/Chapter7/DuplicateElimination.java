@@ -28,5 +28,11 @@ public class DuplicateElimination {
                 if (nums[j] == nums[i]) nums[j] = -1;
             }
         }
+
+        // Display only non -1 values
+        System.out.println("\nUnique values entered:");
+        for (int v : nums) {
+            if (v != -1) System.out.println(v);
+        }
     }
 }
