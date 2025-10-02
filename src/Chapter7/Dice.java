@@ -24,4 +24,13 @@ public class Dice {
         diceSum = die1 + die2;
         return diceSum;
     }
+    //display result
+    public static void displayResult() {
+
+        tally();
+        System.out.printf("%s%12s%n", "DiceSum", "Occurence");
+        for (int count = 2; count < possibility.length; count++) {
+            System.out.printf("%-7d%12s%n", count, possibility[count]);
+        }
+    }
 }
