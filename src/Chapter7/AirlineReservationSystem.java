@@ -1,7 +1,6 @@
 package Chapter7;
 
 import java.util.InputMismatchException;
-import java.util.Random;
 import java.util.Scanner;
 
 public class AirlineReservationSystem {
@@ -18,7 +17,7 @@ public class AirlineReservationSystem {
         for (int seats = 0; seats < 5; seats++) {
 
             book = airlineSeats[seats];
-            if (book == false) {
+            if (!book) {
                 System.out.printf("%s%n%s[%02d]%n%s%n%n", "BOARDING PASS", "Seat No is: ", seats + 1, "Section: First-Class");
                 airlineSeats[seats] = true;
                 return true;
@@ -32,7 +31,7 @@ public class AirlineReservationSystem {
         boolean book;
         for (int seats = 5; seats < 10; seats++) {
             book = airlineSeats[seats];
-            if (book == false) {
+            if (!book) {
                 System.out.printf("%s%n%s[%02d]%n%s%n%n", "BOARDING PASS", "Seat No is: ", seats + 1, "Section: Economy-class");
                 airlineSeats[seats] = true;
                 return true;
