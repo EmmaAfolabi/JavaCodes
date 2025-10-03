@@ -28,7 +28,7 @@ public class Dice {
     public static void displayResult() {
 
         tally();
-        System.out.printf("%s%12s%n", "DiceSum", "Occurence");
+        System.out.printf("%s%12s%n", "DiceSum", "Occurrence");
         for (int count = 2; count < possibility.length; count++) {
             System.out.printf("%-7d%12s%n", count, possibility[count]);
         }
