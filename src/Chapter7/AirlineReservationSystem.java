@@ -47,12 +47,12 @@ public class AirlineReservationSystem {
         char option = 'Y';
 
         Status allSeats = availableSeats();
-        System.out.println("Welcome to Arik Air!");
+        System.out.println("Welcome to EMMY Air!");
 
 
             while (allSeats == Status.Yes) {
 
-                System.out.println("Please type 1 for First Class and type 2 for Economy.");
+                System.out.println("Please type (1) for First Class and type (2) for Economy: ");
                 customer = in.nextInt();
                 if (customer == 1) {
                     check = assignFirstClass();
@@ -124,5 +124,9 @@ public class AirlineReservationSystem {
         }
 
         return Status.Sold;
+    }
+
+    public static void main(String[] args) {
+        new AirlineReservationSystem().assignSeats();
     }
 }
