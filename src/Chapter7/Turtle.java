@@ -114,7 +114,7 @@ public class Turtle {
                 }
                 catch (ArrayIndexOutOfBoundsException e) {
                     System.out.println("Border exceeded");
-                    row;
+                    row = 0;
                 }
 
                 break;
