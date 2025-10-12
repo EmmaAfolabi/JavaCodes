@@ -1,4 +1,4 @@
-package Chapter7;
+package Chapter7.exercise7_22;
 
 public class KnightPiece {
 
