@@ -26,5 +26,22 @@ public class ChessBoard {
         catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Invalid Move");
         }
+        System.out.printf("Knight current position is: (%d, %d)%n", currentRow, currentColumn);
+    }
+    public void displayVisitedSquares() {
+        System.out.printf("%n%17s%n", "ChessBoard");
+        for (int row = 0; row < chess.length; row++) {
+
+            for (int col = 0; col < chess[row].length; col++) {
+
+                if (chess[row][col] == 1)
+                    System.out.printf(" k ");
+                else {
+                    System.out.print(" * ");
+
+                }
+            }
+            System.out.println();
+        }
     }
 }
