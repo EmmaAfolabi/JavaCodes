@@ -5,7 +5,7 @@ public class KnightPiece {
     static final int[] horizontal = new int[8];
     static final int[] vertical = new int[8];
 
-    public knightPiece() {
+    public KnightPiece() {
         horizontal[0] = 2;
         horizontal[1] = 1;
         horizontal[2] = -1;
