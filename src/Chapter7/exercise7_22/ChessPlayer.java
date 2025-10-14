@@ -12,7 +12,7 @@ public class ChessPlayer {
         int counter = 0;
         System.out.println("Move knight around chess board\nEnter moves 0-7");
 
-        while (counter <= 64) {
+        while (counter < 64 && input.hasNextInt()) {
 
             int movenumber = input.nextInt();
 

@@ -7,6 +7,7 @@ public class ChessPlayerTest {
 
         ChessPlayer Emma = new ChessPlayer();
         KnightTour Emmy = new KnightTour();
-        Emma.moveKnight();
+        Emmy.tourKnight();
+        Emmy.displayChessBoard();
     }
 }
