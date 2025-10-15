@@ -43,11 +43,31 @@ public class KnightsTourBruteForce {
                 int nextCol = currentCol + horizontal[i];
 
                 // Check if the move is within the board and the square is unvisited
-                if (nextRow >= 0 && nextRow < BOARD_SIZE) {
-
+                if (nextRow >= 0 && nextRow < BOARD_SIZE &&
+                        nextCol >= 0 && nextCol < BOARD_SIZE &&
+                        board[nextRow][nextCol] == 0) {
+                    validMoves.add(i); // Add the index of the valid move
                 }
             }
+
+            if (validMoves.isEmpty()) {
+                break; // The Knight is stuck
+            }
+
+            // Pick one of the valid moves at random
+            int randomMoveIndex = validMoves.get(random.nextInt(validMoves.size()));
+
+            // Update the knight's position
+            currentRow += vertical[randomMoveIndex];
+            currentCol += horizontal[randomMoveIndex];
+            moveNumber++;
+            board[currentRow][currentCol] = moveNumber;
         }
+        return moveNumber; // This is the total length of the tour
     }
 
+    public static void main(String[] args) {
+
+        System.out.println();
+    }
 }
