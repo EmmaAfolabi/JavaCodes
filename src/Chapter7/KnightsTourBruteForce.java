@@ -8,14 +8,14 @@ import java.util.List;
 
 public class KnightsTourBruteForce {
 
-    private static final int BOARD_SIZE = 8;
-    private static final int SQUARES = BOARD_SIZE * BOARD_SIZE;
+    private static final int BOARD_SIZE = 8; // The board is 8x8
+    private static final int SQUARES = BOARD_SIZE * BOARD_SIZE; // Total squares is 64
 
     // The possible moves a knight can make
     private static final int[] horizontal = {2, 1, -1, -2, -2, -1, 1, 2};
     private static final int[] vertical = {-1, -2, -2, -1, 1, 2, 2, 1};
 
-    private static int[][] board;
+    private static int[][] board; // This is our virtual 8x8 chessboard
     private static SecureRandom random = new SecureRandom();
 
     private static void resetBoard() {
