@@ -20,4 +20,9 @@ public class Time1 {
         this.minute = minute;
         this.second = second;
     }
+
+    // convert to String in universal-time format (HH:MM:SS)
+    public String toUniversalString() {
+        return String.format("%02d:%02d:%02d", hour, minute, second );
+    }
 }
