@@ -10,6 +10,17 @@ public class Time1Test {
         displayTime("After time object is created", time);
         System.out.println();
 
+        // change time and output updated time
+        time.setTime(13, 27, 6);
+        displayTime("After calling setTime", time);
+        System.out.println();
 
+        // attempt to set time with invalid values
+        try {
+            time.setTime(99, 99, 99); // all values out of range
+        }
+        catch (IllegalArgumentException e) {
+            System.out.printf("Exception: %s%n%n", e.getMessage());
+        }
     }
 }
