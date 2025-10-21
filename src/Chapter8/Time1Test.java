@@ -22,5 +22,14 @@ public class Time1Test {
         catch (IllegalArgumentException e) {
             System.out.printf("Exception: %s%n%n", e.getMessage());
         }
+
+        // display time after attempt to set invalid values
+        displayTime("After calling setTime with invalid values", time);
+    }
+
+    // displays a Time1 object in 24-hour and 12-hour formats
+    private static void displayTime(String header, Time1 t) {
+        System.out.printf("%s%nUniversal time: %s%nStandard time: %s%n",
+                header, t.toUniversalString(), t.toString());
     }
 }
