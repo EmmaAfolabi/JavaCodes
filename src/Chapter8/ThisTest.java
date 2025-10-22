@@ -31,5 +31,11 @@ class SimpleTime {
     }
 
     // convert to String in universal-time format (HH:MM:SS)
-
+    public String toUniversalString() {
+        // "this" is not required here to access instance variables,
+        // because method does not have local variables with same
+        // names as instance variables
+        return String.format("%02d:%02d:%02d",
+                this.hour, this.minute, this.second);
+    }
 }
