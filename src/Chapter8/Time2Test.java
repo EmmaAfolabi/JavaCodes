@@ -28,6 +28,7 @@ public class Time2Test {
 
     // displays a Time2 object in 24-hour and 12-hour formats
     private static void displayTime(String header, Time2 t) {
-
+        System.out.printf("%s%n    %s%n    %s%n",
+                header, t.toUniversalString(), t.toString());
     }
 }
