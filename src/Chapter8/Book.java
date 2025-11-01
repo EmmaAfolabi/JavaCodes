@@ -11,4 +11,13 @@ public enum Book {
     VBHTP("Visual Basic How to Program", "2014"),
     CSHARPHTP("Visual C# How to program", "2017");
 
+    // instance fields
+    private final String title; // book title
+    private final String copyrightYear; // copyright year
+
+    // enum constructor
+    Book(String title, String copyrightYear) {
+        this.title = title;
+        this.copyrightYear = copyrightYear;
+    }
 }
