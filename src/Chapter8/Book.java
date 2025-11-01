@@ -20,4 +20,14 @@ public enum Book {
         this.title = title;
         this.copyrightYear = copyrightYear;
     }
+
+    // accessor for field title
+    public String getTitle() {
+        return title;
+    }
+
+    // accessor for field copyrightYear
+    public String getCopyrightYear() {
+        return copyrightYear;
+    }
 }
