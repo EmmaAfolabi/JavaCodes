@@ -17,4 +17,19 @@ public class Employee1 {
         System.out.printf("Employee constructor: %s %s; count = %d%n",
                 firstName, lastName, count);
     }
+
+    // get first name
+    public String getFirstName() {
+        return firstName;
+    }
+
+    // get last name
+    public String getLastName() {
+        return lastName;
+    }
+
+    // static method to get static count value
+    public static int getCount() {
+        return count;
+    }
 }
