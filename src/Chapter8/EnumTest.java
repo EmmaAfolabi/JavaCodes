@@ -1,6 +1,5 @@
 package Chapter8;
 // Testing enum type Book
-
 import java.util.EnumSet;
 
 public class EnumTest {
