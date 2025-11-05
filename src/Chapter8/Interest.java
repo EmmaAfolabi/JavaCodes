@@ -1,6 +1,7 @@
 package Chapter8;
 // Compound-Interest calculations with BigDecimal
 import java.math.BigDecimal;
+import java.text.NumberFormat;
 
 public class Interest {
     public static void main(String[] args) {
@@ -16,6 +17,10 @@ public class Interest {
             // calculate new amount for specified year
             BigDecimal amount =
                     principal.multiply(rate.add(BigDecimal.ONE).pow(year));
+
+            // display the year and the amount
+            System.out.printf("%4d%20s%n", year,
+                    NumberFormat.getCurrencyInstance().format(amount));
         }
     }
 }
