@@ -43,4 +43,23 @@ public class Cylinder {
     public double getVolume() {
         return Math.PI * radius * radius * height;
     }
+
+    public void displayInfo() {
+        System.out.println("Cylinder Properties");
+        System.out.println("Radius: " + radius);
+        System.out.println("Height: " + height);
+        System.out.printf("Volume: %.2f\n", getVolume());
+        System.out.println();
+    }
+
+    public class TestCylinder {
+        public static void main(String[] args) {
+            System.out.println("   Testing Cylinder Class    \n");
+
+
+            System.out.println("Test 1: Creating cylinder with default values");
+            Cylinder cylinder1 = new Cylinder();
+            cylinder1.displayInfo();
+        }
+    }
 }
