@@ -1,6 +1,6 @@
 package Chapter8.Exercises;
 
-public class Cylinder {
+class Cylinder {
     private double radius;
     private double height;
 
@@ -51,15 +51,19 @@ public class Cylinder {
         System.out.printf("Volume: %.2f\n", getVolume());
         System.out.println();
     }
+}
 
-    public class TestCylinder {
-        public static void main(String[] args) {
-            System.out.println("   Testing Cylinder Class    \n");
+public class TestCylinder {
+    public static void main(String[] args) {
+        System.out.println("   Testing Cylinder Class    \n");
 
 
-            System.out.println("Test 1: Creating cylinder with default values");
-            Cylinder cylinder1 = new Cylinder();
-            cylinder1.displayInfo();
-        }
+        System.out.println("Test 1: Creating cylinder with default values");
+        Cylinder cylinder1 = new Cylinder();
+        cylinder1.displayInfo();
+
+        System.out.println("Test 2: Creating cylinder with radius=3.5 and height=7.0");
+        Cylinder cylinder2 = new Cylinder(3.5, 7.0);
+        cylinder2.displayInfo();
     }
 }
