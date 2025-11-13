@@ -76,5 +76,10 @@ public class TestCylinder {
         cylinder3.setRadius(-3.0);
         cylinder3.setHeight(-5.0);
         cylinder3.displayInfo();
+
+        System.out.println("Test 5: Using getter methods");
+        System.out.println("Cylinder2 radius: " + cylinder2.getRadius());
+        System.out.println("Cylinder2 height: " + cylinder2.getHeight());
+        System.out.printf("Cylinder2 volume: %.2f\n", cylinder2.getVolume());
     }
 }
