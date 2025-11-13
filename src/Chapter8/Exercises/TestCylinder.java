@@ -65,5 +65,16 @@ public class TestCylinder {
         System.out.println("Test 2: Creating cylinder with radius=3.5 and height=7.0");
         Cylinder cylinder2 = new Cylinder(3.5, 7.0);
         cylinder2.displayInfo();
+
+        System.out.println("Test 3: Modifying cylinder1 using setters");
+        cylinder1.setRadius(2.0);
+        cylinder1.setRadius(5.0);
+        cylinder1.displayInfo();
+
+        System.out.println("Test 4: Attempting to set negative values");
+        Cylinder cylinder3 = new Cylinder();
+        cylinder3.setRadius(-3.0);
+        cylinder3.setHeight(-5.0);
+        cylinder3.displayInfo();
     }
 }
