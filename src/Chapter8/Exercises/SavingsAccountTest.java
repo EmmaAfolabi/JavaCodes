@@ -10,5 +10,15 @@ public class SavingsAccountTest {
         SavingsAccount saver2 = new SavingsAccount(3000);
 
         SavingsAccount.modifyInterestRate(0.04);
+        double balance1, balance2;
+
+        for (int month = 1; month <=13; month++) {
+
+            balance1 = saver1.calculateMonthlyInterest();
+            saver1.setSavingsBalance(balance1);
+
+            balance2 = saver2.calculateMonthlyInterest();
+            saver2.setSavingsBalance(balance2);
+        }
     }
 }
