@@ -19,6 +19,12 @@ public class SavingsAccountTest {
 
             balance2 = saver2.calculateMonthlyInterest();
             saver2.setSavingsBalance(balance2);
+
+            System.out.printf("   Month %d%nSaver 1%nNew Balance is: %.2f%n%nSaver 2%nNew Balance is %.2f%n%n", month,
+                    balance1, balance2);
+            if (month == 12) {
+                SavingsAccount.modifyInterestRate(0.05);
+            }
         }
     }
 }
