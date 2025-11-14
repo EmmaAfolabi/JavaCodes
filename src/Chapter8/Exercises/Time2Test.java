@@ -31,6 +31,6 @@ public class Time2Test {
 
     private static void displayTime(String header, Time2 t) {
 
-        System.out.printf("");
+        System.out.printf("%n%s%n   %s%n   %s%n%n   New time after increment- %s%n", header, t.toUniversalString(), t.toString(), t.newTime());
     }
 }

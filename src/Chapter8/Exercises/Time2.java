@@ -50,7 +50,7 @@ public class Time2 {
         timeInSeconds = ((hour * 3600) + (minute * 60) + second);
     }
 
-    public void setTime(int hour, int minute, int second) {
+    /*public void setTime(int hour, int minute, int second) {
 
         if (hour < 0 || hour >= 24)
             throw new IllegalArgumentException("hour must be 0 - 23");
@@ -62,7 +62,7 @@ public class Time2 {
             throw new IllegalArgumentException("second must be 0 - 59");
 
         timeInSeconds = ((hour * 3600) + (minute * 60) + second);
-    }
+    }*/
 
     public void setHour(int hour) {
 
