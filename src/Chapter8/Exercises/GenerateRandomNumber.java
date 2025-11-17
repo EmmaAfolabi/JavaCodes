@@ -20,5 +20,9 @@ public class GenerateRandomNumber {
         }
 
 
+        System.out.println("Generating random numbers in the range 10-100");
+        System.out.println("---------------------------------------");
+
+
     }
 }
