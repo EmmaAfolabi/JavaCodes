@@ -23,6 +23,15 @@ public class GenerateRandomNumber {
         System.out.println("Generating random numbers in the range 10-100");
         System.out.println("---------------------------------------");
 
+        for (int i = 1; i <= number; i++) {
 
+            int randomNumber = 10 + randomNumbers.nextInt(91);
+
+            System.out.printf("Number %d: %d%n", i, randomNumber);
+        }
+
+        System.out.println("---------------------------------------");
+
+        input.close();
     }
 }
