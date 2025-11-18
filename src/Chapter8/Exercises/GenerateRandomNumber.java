@@ -20,7 +20,7 @@ public class GenerateRandomNumber {
         }
 
 
-        System.out.println("Generating random numbers in the range 10-100");
+        System.out.println("Generating" + number + "random numbers in the range 10-100");
         System.out.println("---------------------------------------");
 
         for (int i = 1; i <= number; i++) {
