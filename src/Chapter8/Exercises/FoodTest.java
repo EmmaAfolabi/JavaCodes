@@ -78,5 +78,16 @@ public class FoodTest {
 
         System.out.println("-------------------------------------------");
 
+        System.out.println("\nUsing enum comparison");
+        System.out.println("-------------------------------------------");
+
+        Food myfood = Food.BANANA;
+        System.out.println("My favorite food is: " + myfood);
+
+        if (myfood.getType().equals("Fruit")) {
+            System.out.println(myfood.name() + " is a fruit!");
+        }
+
+        System.out.println("\nTotal number of Food constants: " + Food.values().length);
     }
 }
