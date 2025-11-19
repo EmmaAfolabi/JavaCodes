@@ -29,4 +29,54 @@ enum Food {
 }
 
 public class FoodTest {
+
+    public static void main(String[] args) {
+
+        System.out.println("=== Food Enum Information ===\n");
+
+        System.out.println("Using values() method");
+        System.out.println("-------------------------------------------");
+
+        for (Food food : Food.values()) {
+            food.displayInfo();
+        }
+        System.out.println("\n");
+
+        System.out.println("Accessing individual constants");
+        System.out.println("-------------------------------------------");
+
+        Food apple = Food.APPLE;
+        System.out.println("Name: " + apple.name());
+        System.out.println("Type: " + apple.getType());
+        System.out.println("Calories: " + apple.getCalories());
+
+        System.out.println();
+
+        Food banana = Food.BANANA;
+        System.out.println("Name: " + banana.name());
+        System.out.println("Type: " + banana.getType());
+        System.out.println("Calories: " + banana.getCalories());
+
+        System.out.println();
+
+        Food carrot = Food.CARROT;
+        System.out.println("Name: " + carrot.name());
+        System.out.println("Type: " + carrot.getType());
+        System.out.println("Calories: " + carrot.getCalories());
+
+        System.out.println("\n");
+
+        System.out.println("Formatted table display");
+        System.out.println("-------------------------------------------");
+        System.out.printf("%-10s | %-10s | %-10s%n", "Food", "Type", "Calories");
+        System.out.println("-------------------------------------------");
+
+        for (Food food : Food.values()) {
+            System.out.printf("%-10s | %-10s | %-10d%n",
+                    food.name(), food.getType(), food.getCalories());
+        }
+
+        System.out.println("-------------------------------------------");
+
+    }
 }
