@@ -35,4 +35,13 @@ public class Complex {
         this.imaginary = imaginary;
     }
 
+    public String addComplexNumbers(Complex obj) {
+
+        double addReal = this.getReal() + obj.getReal();
+        double addImaginary = this.getImaginary() + obj.imaginary;
+
+        return String.format("%.2f, %.2f%s", addReal, addImaginary, "i");
+    }
+
+
 }
