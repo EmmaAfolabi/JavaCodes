@@ -1,5 +1,6 @@
 package Chapter8.Exercises;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ComplexTest {
@@ -23,6 +24,8 @@ public class ComplexTest {
 
             System.out.println(obj1.addComplexNumbers(obj2));
         }
-
+        catch (InputMismatchException e) {
+            System.out.println("Error!! double value expected");
+        }
     }
 }
