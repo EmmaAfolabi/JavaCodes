@@ -43,5 +43,11 @@ public class Complex {
         return String.format("%.2f, %.2f%s", addReal, addImaginary, "i");
     }
 
+    public String subtractComplexNumbers(Complex obj) {
 
+        double subReal = this.getReal() - obj.getReal();
+        double subImag = this.getImaginary() - obj.getImaginary();
+
+        return String.format("%.2f, %.2f%s", subReal, subImag,"i");
+    }
 }
