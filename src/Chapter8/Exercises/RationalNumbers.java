@@ -88,5 +88,23 @@ public class RationalNumbers {
 
         return new RationalNumbers(tempNum, tempDeno);
 
+
     }
+
+    public static RationalNumbers multiply(RationalNumbers object1, RationalNumbers object2) {
+
+        int deno = object1.getDenominator();
+        int deno1 = object2.getDenominator();
+
+        int num = object1.getNumerator();
+        int num1 = object2.getNumerator();
+
+        num = num * num1;
+        deno = deno * deno1;
+
+        return new RationalNumbers(num, deno);
+
+    }
+
+
 }
