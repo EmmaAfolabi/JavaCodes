@@ -52,5 +52,5 @@ public class RationalNumbers {
 
     }
 
-    public static
+    public static RationalNumbers subFractions(RationalNumbers obj)
 }
