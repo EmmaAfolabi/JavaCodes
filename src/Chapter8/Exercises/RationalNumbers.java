@@ -106,5 +106,21 @@ public class RationalNumbers {
 
     }
 
+    private static int findLCM(int num1, int num2) {
+        int divUp, divDown;
+
+        int gcd = findGCD(num1, num2);
+
+        divUp = num1/gcd;
+        divDown = num2 / gcd;
+
+        int lcm = gcd * divUp * divDown;
+
+        return lcm;
+
+    }
+
+
+
 
 }
