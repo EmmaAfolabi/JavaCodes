@@ -120,7 +120,39 @@ public class RationalNumbers {
 
     }
 
+    private static int findGCD(int num1, int num2) {
 
+        int a, b;
+        int remainder = 0;
 
+        if (num1 > num2) {
+            a = num1;
+            b = num2;
+        }
+        else {
+            a = num2;
+            b = num1;
+        }
 
+        remainder = modulo(a, b);
+
+        while (remainder > 0) {
+
+            a = b;
+
+            b = remainder;
+
+            remainder = modulo(a, b);
+            if (remainder < 0) {
+                b = remainder * -1;
+                break;
+            }
+        }
+
+        return b;
+    }
+
+    private static int modulo(int a, int b) {
+
+    }
 }
