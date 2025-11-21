@@ -153,6 +153,13 @@ public class RationalNumbers {
     }
 
     private static int modulo(int a, int b) {
+        int modulus = a % b;
 
+        return modulus;
+    }
+
+    public String toString() {
+
+        return String.format("%d / %d", numerator, denominator);
     }
 }
