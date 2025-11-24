@@ -78,4 +78,57 @@ public class Tic_Tac_Toe {
             }
         }
     }
+
+    public void playWithComputer() {
+        System.out.printf("Would you like to go first [Y/N] ?%n");
+        char answer = input.next().charAt(0);
+
+        if (answer == 'Y' || answer == 'Y') {
+            currentPlayer = players.human;
+        }
+        else {
+            currentPlayer == players.computer;
+        }
+
+        int firstMove = 1 + random.nextInt(2);
+
+        if (firstMove == 1) {
+            move = Type.X;
+            if (currentPlayer == players.human)
+                System.out.printf("Human is 'X'%n");
+            else
+                System.out.printf("Computer is 'X'%n");
+        }
+        else {
+            move = Type.O;
+            if (currentPlayer == players.human)
+                System.out.printf("Human is 'O'%n");
+            else
+                System.out.printf("Computer is 'O'%n");
+        }
+
+        int gameCount = 0;
+        int moveNo;
+        boolean gameWon = false;
+
+        while (gameCount < 9 && !gameWon) {
+            if (currentPlayer == players.human) {
+                System.out.printf("Your Turn%nEnter move number (0-8): ");
+                moveNo = input.nextInt();
+
+                while (!makeMove(moveNo)) {
+                    System.out.printf("Try again. Enter move number (0-8): ");
+                    moveNo = input.nextInt();
+                }
+            }
+            else {
+                do {
+                    moveNo = random.nextInt(9);
+                } while (board[row_moves[moveNo]][col_moves[moveNo]] != Type.EMPTY);
+
+                System.out.printf("Computer moves: %d%n", moveNo);
+                makeMove(moveNo);
+            }
+        }
+    }
 }
