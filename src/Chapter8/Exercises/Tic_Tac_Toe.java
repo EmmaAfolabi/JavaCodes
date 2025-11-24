@@ -17,6 +17,9 @@ public class Tic_Tac_Toe {
     private int row_moves[] = {0,0,0,1,1,1,2,2,2};
     private int col_moves[] = {0,1,2,0,1,2,0,1,2};
 
+    static Type move;
+    static players currentPlayer;
+
     public Tic_Tac_Toe() {
         for (int i = 0; i < board.length; i++)
             for (int k = 0; k < board[i].length; k++)
@@ -39,6 +42,40 @@ public class Tic_Tac_Toe {
             move = Type.X;
         }
 
+        int gameCount = 0;
+        boolean gameWon = false;
 
+        while (gameCount < 9 && !gameWon) {
+            System.out.printf("%s's turn%nEnter move number (0-8): ", move);
+            int moveNo = input.nextInt();
+
+
+            while (!makeMove(moveNo)) {
+                System.out.printf("Try again. Enter move number (0-8): ");
+                moveNo = input.nextInt();
+            }
+
+            displayBoard();
+
+            if (checkWin()) {
+                System.out.printf("%s wins!!%n", move);
+                gameWon = true;
+            }
+            else {
+                gameCount++;
+
+                if (gameCount == 9) {
+                    System.out.println("It's a draw!");
+                    break;
+                }
+
+                if (move == Type.X) {
+                    move = Type.O;
+                }
+                else {
+                    move = Type.X;
+                }
+            }
+        }
     }
 }
