@@ -22,4 +22,23 @@ public class Tic_Tac_Toe {
             for (int k = 0; k < board[i].length; k++)
                 board[i][k] = Type.EMPTY;
     }
+
+    public void play() {
+
+        System.out.println("Select first move: 'X' or 'O'");
+        char firstMove = input.next().charAt(0);
+
+        if (firstMove == 'X') {
+            move = Type.X;
+        }
+        else if (firstMove == 'O') {
+            move = Type.O;
+        }
+        else {
+            System.out.println("Invalid choice! Defaulting to 'X'");
+            move = Type.X;
+        }
+
+
+    }
 }
