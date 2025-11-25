@@ -183,4 +183,19 @@ public class Tic_Tac_Toe {
             System.out.println("You can't move to an occupied square");
         return false;
     }
+
+    public void displayBoard() {
+        for (Type value[]: board) {
+            for (Type box: value) {
+                if (box == Type.X)
+                    System.out.print(" X ");
+                else if (box == Type.O)
+                    System.out.print(" O ");
+                else if (box == Type.EMPTY)
+                    System.out.println(" * ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
 }
