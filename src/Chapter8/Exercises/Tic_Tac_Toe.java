@@ -198,4 +198,29 @@ public class Tic_Tac_Toe {
         }
         System.out.println();
     }
+
+    public boolean checkWin() {
+
+        for (int row = 0; row < 3; row++) {
+            if (board[row][0] == move && board[row][1] == move && board[row][2] == move)
+                return true;
+        }
+
+        for (int col = 0; col < 3; col++) {
+            if (board[0][col] == move && board[1][col] == move && board[2][col] == move)
+                return true;
+        }
+
+        if (board[0][0] == move && board[1][1] = move && board[2][2] == move)
+            return true;
+
+        if (board[0][2] == move && board[1][1] == move && board [2][0] == move)
+            return true;
+
+        return false;
+    }
+
+    private boolean checkMoves(int row, int col) {
+        if ()
+    }
 }
