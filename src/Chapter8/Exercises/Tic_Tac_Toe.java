@@ -129,6 +129,58 @@ public class Tic_Tac_Toe {
                 System.out.printf("Computer moves: %d%n", moveNo);
                 makeMove(moveNo);
             }
+
+            displayBoard();
+
+            if (checkWin()) {
+                if (currentPlayer == players.human) {
+                    System.out.printf("Human wins!!%n");
+                }
+                else {
+                    System.out.println("Computer wins!");
+                }
+                gameWon = true;
+            }
+            else {
+                gameCount++;
+
+                if (gameCount == 9) {
+                    System.out.println("It's a draw!");
+                    break;
+                }
+
+                if (move == Type.X) {
+                    move = Type.O;
+                }
+                else {
+                    move = Type.X;
+                }
+
+                if (currentPlayer == players.human) {
+                    currentPlayer = players.computer;
+                }
+                else {
+                    currentPlayer = players.human;
+                }
+            }
         }
+    }
+
+    public boolean makeMove(int MoveNo) {
+
+        if (moveNo < 0 || moveNo > 8) {
+            System.out.println("Invalid move number! Must be 0-8");
+            return false;
+        }
+
+        if (board[row_moves[moveNo]][col_moves[moveNo]] == Type.EMPTY) {
+            board[row_moves[moveNo]][col_moves[moveNo]] = move;
+            currentRow = row_moves[moveNo];
+            currentColumn = col_moves[moveNo];
+            return true;
+        }
+        else
+            System.out.println("You can't move to an occupied square");
+        return false;
     }
 }
