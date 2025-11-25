@@ -221,6 +221,11 @@ public class Tic_Tac_Toe {
     }
 
     private boolean checkMoves(int row, int col) {
-        if ()
+        if (row >= 0 && row <= 2) {
+            if (col >= 0 && col <= 2)
+                if (board[row][col] == move)
+                    return true;
+        }
+        return false;
     }
 }
