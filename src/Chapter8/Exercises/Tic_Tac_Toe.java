@@ -83,11 +83,11 @@ public class Tic_Tac_Toe {
         System.out.printf("Would you like to go first [Y/N] ?%n");
         char answer = input.next().charAt(0);
 
-        if (answer == 'Y' || answer == 'Y') {
+        if (answer == 'Y' || answer == 'y') {
             currentPlayer = players.human;
         }
         else {
-            currentPlayer == players.computer;
+            currentPlayer = players.computer;
         }
 
         int firstMove = 1 + random.nextInt(2);
@@ -166,7 +166,7 @@ public class Tic_Tac_Toe {
         }
     }
 
-    public boolean makeMove(int MoveNo) {
+    public boolean makeMove(int moveNo) {
 
         if (moveNo < 0 || moveNo > 8) {
             System.out.println("Invalid move number! Must be 0-8");
@@ -192,7 +192,7 @@ public class Tic_Tac_Toe {
                 else if (box == Type.O)
                     System.out.print(" O ");
                 else if (box == Type.EMPTY)
-                    System.out.println(" * ");
+                    System.out.print(" * ");
             }
             System.out.println();
         }
@@ -211,7 +211,7 @@ public class Tic_Tac_Toe {
                 return true;
         }
 
-        if (board[0][0] == move && board[1][1] = move && board[2][2] == move)
+        if (board[0][0] == move && board[1][1] == move && board[2][2] == move)
             return true;
 
         if (board[0][2] == move && board[1][1] == move && board [2][0] == move)
